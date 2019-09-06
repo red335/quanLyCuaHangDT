@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Panel panel1;
             this.lbExit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,15 +37,21 @@
             this.txtLoggin = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lbLoggin = new System.Windows.Forms.Label();
+            this.lbWarning = new System.Windows.Forms.Label();
+            this.pnBackgroundProcess = new System.Windows.Forms.Panel();
+            this.pnProcess = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             panel1 = new System.Windows.Forms.Panel();
             panel1.SuspendLayout();
+            this.pnBackgroundProcess.SuspendLayout();
             this.SuspendLayout();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+
             // 
             // panel1
             // 
             panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(150)))));
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panel1.Controls.Add(this.lbExit);
             panel1.Location = new System.Drawing.Point(-3, 1);
             panel1.Name = "panel1";
@@ -57,7 +64,7 @@
             this.lbExit.AutoSize = true;
             this.lbExit.Font = new System.Drawing.Font(".VnAvantH", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbExit.ForeColor = System.Drawing.Color.Red;
-            this.lbExit.Location = new System.Drawing.Point(544, -4);
+            this.lbExit.Location = new System.Drawing.Point(546, -4);
             this.lbExit.Name = "lbExit";
             this.lbExit.Size = new System.Drawing.Size(66, 75);
             this.lbExit.TabIndex = 0;
@@ -114,7 +121,6 @@
             this.txtLoggin.Name = "txtLoggin";
             this.txtLoggin.Size = new System.Drawing.Size(256, 32);
             this.txtLoggin.TabIndex = 4;
-            this.txtLoggin.Text = "0";
             this.txtLoggin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPass
@@ -126,7 +132,6 @@
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(256, 32);
             this.txtPass.TabIndex = 5;
-            this.txtPass.Text = "123";
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbLoggin
@@ -145,14 +150,54 @@
             this.lbLoggin.MouseLeave += new System.EventHandler(this.lbLogin_MouseLeave);
             this.lbLoggin.MouseHover += new System.EventHandler(this.lbLogin_MouseHover);
             // 
+            // lbWarning
+            // 
+            this.lbWarning.AutoSize = true;
+            this.lbWarning.Font = new System.Drawing.Font("UTM Nokia Standard", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWarning.ForeColor = System.Drawing.Color.Red;
+            this.lbWarning.Location = new System.Drawing.Point(184, 147);
+            this.lbWarning.Name = "lbWarning";
+            this.lbWarning.Size = new System.Drawing.Size(267, 22);
+            this.lbWarning.TabIndex = 7;
+            this.lbWarning.Text = "Tên đăng nhập hoặc mật khẩu sai";
+            this.lbWarning.Visible = false;
+            // 
+            // pnBackgroundProcess
+            // 
+            this.pnBackgroundProcess.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pnBackgroundProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.pnBackgroundProcess.Controls.Add(this.pnProcess);
+            this.pnBackgroundProcess.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnBackgroundProcess.Location = new System.Drawing.Point(1, 445);
+            this.pnBackgroundProcess.Name = "pnBackgroundProcess";
+            this.pnBackgroundProcess.Size = new System.Drawing.Size(607, 15);
+            this.pnBackgroundProcess.TabIndex = 8;
+            this.pnBackgroundProcess.Visible = false;
+            // 
+            // pnProcess
+            // 
+            this.pnProcess.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pnProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pnProcess.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnProcess.Location = new System.Drawing.Point(-150, 0);
+            this.pnProcess.Name = "pnProcess";
+            this.pnProcess.Size = new System.Drawing.Size(150, 15);
+            this.pnProcess.TabIndex = 9;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5;
+            this.timer1.Tick += new System.EventHandler(this.LapThoiGian);
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(607, 472);
             this.ControlBox = false;
+            this.Controls.Add(this.pnBackgroundProcess);
+            this.Controls.Add(this.lbWarning);
             this.Controls.Add(this.lbLoggin);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtLoggin);
@@ -166,6 +211,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            this.pnBackgroundProcess.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +225,9 @@
         private System.Windows.Forms.TextBox txtLoggin;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label lbLoggin;
+        private System.Windows.Forms.Label lbWarning;
+        private System.Windows.Forms.Panel pnBackgroundProcess;
+        private System.Windows.Forms.Panel pnProcess;
+        private System.Windows.Forms.Timer timer1;
     }
 }

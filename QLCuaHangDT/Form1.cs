@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLCuaHangDT.GUI;
+using QLCuaHangDT.DAO;
 namespace QLCuaHangDT
 {
-    public delegate void exitForm1  (); 
+    public delegate void batMoForm1  ();
+ 
     public partial class Form1 : Form
     {
-        exitForm1 exitThis;
+        private int id_NhanVien = 0;
+        public int Id_NhanVien { get => id_NhanVien; set => id_NhanVien = value; }
+
         public Form1()
         {
             InitializeComponent();
-            exitThis += new exitForm1(ThoatForm);
+           
             this.FormClosing += DialogThoat;
             this.Load += HienDangNhap;
-           
+             
         }
 
         private void DialogThoat(object sender, FormClosingEventArgs e)
@@ -37,12 +34,13 @@ namespace QLCuaHangDT
         }
         public void LoadForm1() {
             this.Show();
+          
         }
 
         private void HienDangNhap(object o, EventArgs e)
         {
 
-            FormDangNhap formDangNhap = new FormDangNhap(exitThis , new exitForm1(LoadForm1));
+            FormDangNhap formDangNhap = new FormDangNhap(this);
             this.Hide();
             formDangNhap.ShowDialog();
         }

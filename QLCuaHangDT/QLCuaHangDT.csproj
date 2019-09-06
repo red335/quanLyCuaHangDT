@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\KetNoiDatabase.cs" />
+    <Compile Include="DAO\ReadDataSource.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

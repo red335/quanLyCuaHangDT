@@ -28,11 +28,11 @@ namespace QLCuaHangDT.GUI
         #region chay luong (Thread)
         public void loadForm1()
         {
-            Thread.Sleep(7000);         
+            Thread.Sleep(2000);         
             mainForm.Invoke(new MethodInvoker(() =>
             {
                 mainForm.Id_NhanVien = id;
-                mainForm.Show();
+                mainForm.LoadForm1();
             }));
             this.Invoke(new MethodInvoker(Close));
             thread.Abort();
@@ -54,7 +54,8 @@ namespace QLCuaHangDT.GUI
             if ((a = layID(txtLoggin.Text, txtPass.Text)) >= 0)
             {
                 id = a;
-
+                txtLoggin.Enabled = false;
+                txtPass.Enabled = false;
                 MoForm = true;
                 pnBackgroundProcess.Visible = true;
                 timer1.Start();
@@ -100,13 +101,14 @@ namespace QLCuaHangDT.GUI
         private int layID(string user, string pass)
         {
             int id = 0;
-          
+            user = "BHYT1234";
+            pass = "NTK1234";
             // string query = "select userID from TaiKhoan where tenUser = '"+user+"' and matKhau = '"+pass+"'";
             string query =
                 string.Format("select userID from TaiKhoan where tenUser = '{0}' and matKhau = '{1}'", user, pass);
 
-            KetNoiDatabase ketNoi = new KetNoiDatabase();
-            DataTable table = ketNoi.docDuLieu(query);
+          
+            DataTable table = KetNoiDatabase.docDuLieu(query);
 
             if (table == null || table.Rows.Count == 0)
             {

@@ -7,8 +7,8 @@ using System.Data.SqlClient;
 using System.Data;
 
 namespace QLCuaHangDT.DAO
-{  
-    class KetNoiDatabase
+{
+    abstract class  KetNoiDatabase
     {
         private static string connString = ReadDataSource.layDuongDanSQl();
         public static SqlConnection ketNoiDatabase()
@@ -16,8 +16,8 @@ namespace QLCuaHangDT.DAO
             return new SqlConnection(connString);
         }
 
-
-        public bool thaoTacDuLieu(string query)
+        #region Cac Ham Nonquery va co query
+        public static bool thaoTacDuLieu(string query)
         {
             SqlConnection con = KetNoiDatabase.ketNoiDatabase();
             bool hopLe = true;
@@ -35,9 +35,7 @@ namespace QLCuaHangDT.DAO
 
             return hopLe;
         }
-
-
-        public DataTable docDuLieu(string query) {
+        public static DataTable docDuLieu(string query) {
             DataTable table = new DataTable();
             SqlConnection con = KetNoiDatabase.ketNoiDatabase();
             try
@@ -57,5 +55,13 @@ namespace QLCuaHangDT.DAO
             con.Close();
             return table;
         }
+        #endregion
+
+        #region Them Xoa Sua
+        abstract protected void Them(string data);
+        abstract protected void Sua();
+        abstract protected void Xoa();
+        #endregion
+
     }
 }

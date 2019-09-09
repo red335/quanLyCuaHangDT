@@ -45,8 +45,6 @@
             panel1.SuspendLayout();
             this.pnBackgroundProcess.SuspendLayout();
             this.SuspendLayout();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-
             // 
             // panel1
             // 
@@ -55,7 +53,7 @@
             panel1.Controls.Add(this.lbExit);
             panel1.Location = new System.Drawing.Point(-3, 1);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(612, 71);
+            panel1.Size = new System.Drawing.Size(611, 71);
             panel1.TabIndex = 0;
             // 
             // lbExit
@@ -64,7 +62,7 @@
             this.lbExit.AutoSize = true;
             this.lbExit.Font = new System.Drawing.Font(".VnAvantH", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbExit.ForeColor = System.Drawing.Color.Red;
-            this.lbExit.Location = new System.Drawing.Point(546, -4);
+            this.lbExit.Location = new System.Drawing.Point(545, -4);
             this.lbExit.Name = "lbExit";
             this.lbExit.Size = new System.Drawing.Size(66, 75);
             this.lbExit.TabIndex = 0;
@@ -205,6 +203,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormDangNhap";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

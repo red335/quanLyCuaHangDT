@@ -1,0 +1,11 @@
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\bin\Release\QLCuaHangDT.exe.config
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\bin\Release\QLCuaHangDT.exe
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\bin\Release\QLCuaHangDT.pdb
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Release\QLCuaHangDT.csprojAssemblyReference.cache
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Release\QLCuaHangDT.Form1.resources
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Release\QLCuaHangDT.GUI.FormDangNhap.resources
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Release\QLCuaHangDT.Properties.Resources.resources
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Release\QLCuaHangDT.csproj.GenerateResource.cache
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Release\QLCuaHangDT.csproj.CoreCompileInputs.cache
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Release\QLCuaHangDT.exe
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Release\QLCuaHangDT.pdb

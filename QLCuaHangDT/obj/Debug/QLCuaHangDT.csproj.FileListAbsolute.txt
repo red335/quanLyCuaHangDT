@@ -23,7 +23,6 @@ D:\TaiLieuGithub\QuanLyCuaHangDienThoai\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaH
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\bin\Debug\QLCuaHangDT.exe.config
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\bin\Debug\QLCuaHangDT.exe
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\bin\Debug\QLCuaHangDT.pdb
-D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.csprojAssemblyReference.cache
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.Form1.resources
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GUI.FormDangNhap.resources
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.Properties.Resources.resources
@@ -31,3 +30,5 @@ D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.csproj.G
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.csproj.CoreCompileInputs.cache
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.exe
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.pdb
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GUI.QuanLyKho.resources
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GUI.ChiTietThietBi.resources

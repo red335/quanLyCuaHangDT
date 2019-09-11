@@ -1,25 +1,34 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using QLCuaHangDT.GUI;
 using QLCuaHangDT.Handler;
+using QLCuaHangDT.Model;
+using QLCuaHangDT.DAO;
 namespace QLCuaHangDT
 {
     public delegate void batMoForm1  ();
     public partial class Form1 : Form
     {
+        private NhanVienDAO nvDao = new NhanVienDAO();
         private MainFormHandler mainHandler ;
-        private int id_NhanVien = 0;
-        public int Id_NhanVien { get => id_NhanVien; set => id_NhanVien = value; }
-
+        private NhanVien nhanVien;
+  
+        internal NhanVien NhanVien { get => nhanVien; set => nhanVien = value; }
+      
         public Form1()
         {
             InitializeComponent();
             mainHandler = new MainFormHandler(this); 
             this.FormClosing += DialogThoat;
-              this.Load += HienDangNhap;
+            NhanVien = new NhanVien();
+            //   this.Load += HienDangNhap;
 
-          
+            gangSuKien();
         }
+       
+       
+
         #region Dong Va Mo Form
         private void DialogThoat(object sender, FormClosingEventArgs e)
         {
@@ -35,9 +44,36 @@ namespace QLCuaHangDT
         }
         public void LoadForm1() {
             this.Show();
-            mainHandler.DocDS(id_NhanVien);
+            gangSuKien();
+            NhanVien = nvDao.layMotNhanVien(NhanVien.IdTaiKhoan);
+            mainHandler.loadAvatar();
+        }
+        public void gangSuKien()
+        {
+            mainHandler.loadAvatar();
+            pbExit.Click +=mainHandler.btnExit_Click;
+            pbExit.MouseHover += mainHandler.PictureBoxMouse_Hover;
+            pbExit.MouseLeave += mainHandler.PictureBoxMouse_Leave;
+           
+            pbHide.MouseHover += mainHandler.PictureBoxMouse_Hover;
+            pbHide.MouseLeave += mainHandler.PictureBoxMouse_Leave;
+            pbHide.Click += mainHandler.btnHide_Click;
+
+
+            btnKho.MouseHover += mainHandler.ButtonMouse_Hover;
+            btnKho.MouseLeave += mainHandler.ButtonMouse_Leave;
+            btnNV.MouseHover += mainHandler.ButtonMouse_Hover;
+            btnNV.MouseLeave += mainHandler.ButtonMouse_Leave;
+            btnTC.MouseHover += mainHandler.ButtonMouse_Hover;
+            btnTC.MouseLeave += mainHandler.ButtonMouse_Leave;
+            btnTK.MouseHover += mainHandler.ButtonMouse_Hover;
+            btnTK.MouseLeave += mainHandler.ButtonMouse_Leave;
+
+            //Click Cac button;
+            btnKho.Click += mainHandler.BtnMenu_Click;
 
         }
+
         #endregion
 
 
@@ -48,5 +84,12 @@ namespace QLCuaHangDT
             this.Hide();
             formDangNhap.ShowDialog();
         }
+
+        private void BtnTC_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
+  
 }

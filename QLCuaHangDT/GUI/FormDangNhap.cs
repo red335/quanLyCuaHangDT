@@ -31,7 +31,7 @@ namespace QLCuaHangDT.GUI
             Thread.Sleep(2000);         
             mainForm.Invoke(new MethodInvoker(() =>
             {
-                mainForm.Id_NhanVien = id;
+                mainForm.NhanVien.IdTaiKhoan = id;
                 mainForm.LoadForm1();
             }));
             this.Invoke(new MethodInvoker(Close));
@@ -50,6 +50,7 @@ namespace QLCuaHangDT.GUI
         #region Thao tac Button Login
         private void lbLogin_Click(object sender, EventArgs e)
         {
+            lbWarning.Visible = false;
             int a;
             if ((a = layID(txtLoggin.Text, txtPass.Text)) >= 0)
             {
@@ -59,10 +60,12 @@ namespace QLCuaHangDT.GUI
                 MoForm = true;
                 pnBackgroundProcess.Visible = true;
                 timer1.Start();
-               
+
                 thread.Start();
 
             }
+            else
+                MoForm = false;
         }
         private void lbLogin_MouseHover(object sender, EventArgs e)
         {
@@ -102,7 +105,7 @@ namespace QLCuaHangDT.GUI
         {
             int id = 0;
             user = "BHYT1234";
-            pass = "NTK1234";
+            pass = "NTK12345";
             // string query = "select userID from TaiKhoan where tenUser = '"+user+"' and matKhau = '"+pass+"'";
             string query =
                 string.Format("select userID from TaiKhoan where tenUser = '{0}' and matKhau = '{1}'", user, pass);

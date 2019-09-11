@@ -56,21 +56,47 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ChiTietThietBi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ChiTietThietBi.Designer.cs">
+      <DependentUpon>ChiTietThietBi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MyLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PictureCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyKho.Designer.cs">
+      <DependentUpon>QuanLyKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Handler\MainFormHandler.cs" />
+    <Compile Include="Handler\QuanLyKhoHandler.cs" />
     <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\ThietBi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ChiTietThietBi.resx">
+      <DependentUpon>ChiTietThietBi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyKho.resx">
+      <DependentUpon>QuanLyKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

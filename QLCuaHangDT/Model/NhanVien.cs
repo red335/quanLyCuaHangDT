@@ -16,6 +16,8 @@ namespace QLCuaHangDT.Model
         private bool gioiTinh;
         private int idTaiKhoan;
         private string chucVu;
+        private string avatar;
+        private string tenHienThi;
         List<int> quyenHanNhanVien = new List<int>();
         public NhanVien(int iDNhanVien, string hoTen, string namSinh, string queQuan, string sDT, bool gioiTinh, int idTaiKhoan, string chucVu)
         {
@@ -38,10 +40,26 @@ namespace QLCuaHangDT.Model
         public int IdTaiKhoan { get => idTaiKhoan; set => idTaiKhoan = value; }
         public string ChucVu { get => chucVu; set => chucVu = value; }
         public List<int> QuyenHanNhanVien { get => quyenHanNhanVien; set => quyenHanNhanVien = value; }
+        public string Avatar { get => avatar; set => avatar = value; }
+        public string TenHienThi { get => tenHienThi; set => tenHienThi = value; }
 
         public NhanVien()
         {
 
+        }
+
+        public NhanVien(int iDNhanVien, string hoTen, string namSinh, string queQuan, string sDT, bool gioiTinh, int idTaiKhoan, string chucVu, string avatar, string tenHienThi)
+        {
+            this.iDNhanVien = iDNhanVien;
+            this.hoTen = hoTen;
+            this.namSinh = namSinh;
+            this.queQuan = queQuan;
+            SDT = sDT;
+            this.gioiTinh = gioiTinh;
+            this.idTaiKhoan = idTaiKhoan;
+            this.chucVu = chucVu;
+            this.avatar = avatar;
+            this.tenHienThi = tenHienThi;
         }
     }
 }

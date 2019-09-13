@@ -1,10 +1,11 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 using System.Windows.Forms;
 using QLCuaHangDT.Handler;
-
+using QLCuaHangDT.Model;
 namespace QLCuaHangDT.GUI
 {
     public enum MenuQuanLyKho
@@ -17,10 +18,11 @@ namespace QLCuaHangDT.GUI
         private QuanLyKhoHandler quanLyKhoHandler;
         private MenuQuanLyKho trangThai = MenuQuanLyKho.DIEN_THOAI;
         private Button selectedButton = null;
-      
+        List<DienThoai> dsDT = new List<DienThoai>();
         public MenuQuanLyKho TrangThaiMenu { get => trangThai; set => trangThai = value; }
         public Button SelectedButton { get => selectedButton; set => selectedButton = value; }
-
+        public List<DienThoai> DsDT { get => dsDT; set => dsDT = value; }
+        public FlowLayoutPanel FlowList { get => flowList; set => flowList = value; }
         public QuanLyKho(int x = -1, int y = -1)
         {
             InitializeComponent();
@@ -33,6 +35,9 @@ namespace QLCuaHangDT.GUI
        
 
             gangSuKien();
+
+            quanLyKhoHandler.Menu_OnClick(btnDT,EventArgs.Empty);
+            quanLyKhoHandler.LoadDanhSachhangHoa();
         }
         private void gangSuKien()
         {
@@ -58,8 +63,6 @@ namespace QLCuaHangDT.GUI
             pbSort.MouseHover += quanLyKhoHandler.PictureBox_Hover;
             pbSort.MouseLeave += quanLyKhoHandler.PictureBox_Leave;
         }
-
-       
     }
 
 

@@ -13,7 +13,7 @@ namespace QLCuaHangDT.GUI
 {
     public partial class ChiTietThietBi : UserControl
     {
-        private ThietBi thietBi;
+        private SanPham sanPham;
         private Color myColor_;
         private Color changedColor;
 
@@ -22,52 +22,43 @@ namespace QLCuaHangDT.GUI
             InitializeComponent();
             myColor_ = this.BackColor;
             changedColor = Color.FromArgb(255, 128, 0);
-            cpExpand.Click += cpExpand_ObClick;
+          
             ganeSuKien();
+        }
+        public ChiTietThietBi(SanPham sanPham) {
+            InitializeComponent();
+            this.sanPham = sanPham;
+            myColor_ = this.BackColor;
+            changedColor = Color.FromArgb(255, 128, 0);
+
+            ganeSuKien();
+            caiDat();
         }
 
         private void ganeSuKien() {
-            mlMa.MouseHover += MyLabel_OnMouseHover;
-            mlMa.MouseLeave += MyLabel_OnMouseLeave;
-            mlMa.MouseClick += MyLabel_OnMouseClick;
-
-            mlTen.MouseHover += MyLabel_OnMouseHover;
-            mlTen.MouseLeave += MyLabel_OnMouseLeave;
-            mlTen.MouseClick += MyLabel_OnMouseClick;
-
-            mlGia.MouseHover += MyLabel_OnMouseHover;
-            mlGia.MouseLeave += MyLabel_OnMouseLeave;
-            mlGia.MouseClick += MyLabel_OnMouseClick;
-
-            mlHangSX.MouseHover += MyLabel_OnMouseHover;
-            mlHangSX.MouseLeave += MyLabel_OnMouseLeave;
-            mlHangSX.MouseClick += MyLabel_OnMouseClick;
-
-            mlConHang.MouseHover += MyLabel_OnMouseHover;
-            mlConHang.MouseLeave += MyLabel_OnMouseLeave;
-            mlConHang.MouseClick += MyLabel_OnMouseClick;
-
-            mlKM.MouseHover += MyLabel_OnMouseHover;
-            mlKM.MouseLeave += MyLabel_OnMouseLeave;
-            mlKM.MouseClick += MyLabel_OnMouseClick;
-
-
+            cpExpand.Click += cpExpand_ObClick;
+            cpExpand.MouseHover += cpExpand_OnMouseHover;
+            cpExpand.MouseLeave += cpExpand_OnMouseLeave;
         }
 
-        private void MyLabel_OnMouseClick(object sender, MouseEventArgs e)
-        {
-            throw new NotImplementedException();
+        private void caiDat() {
+            mlMa.Text ="DT"+ sanPham.MaSanPham.ToString();
+            mlTen.Text = sanPham.TenSanPham;
+            mlGia.Text = sanPham.Gia.ToString()+" D";
+            mlHangSX.Text = sanPham.HangSanXuatSanPham.TenHangSX;
+            mlConHang.Text = sanPham.SoLuongTonKho1 > 0 ? "Còn" : "Hết";
+            mlKM.Text = sanPham.CoKhuyenMai == true ? "Có" : "Không";
         }
 
-        private void MyLabel_OnMouseLeave(object sender, EventArgs e)
+        private void cpExpand_OnMouseLeave(object sender, EventArgs e)
         {
-            (sender as MyLabel).BackColor = myColor_;
+            (sender as PictureBox).BackColor = myColor_;
             this.BackColor = myColor_;
         }
 
-        private void MyLabel_OnMouseHover(object sender, EventArgs e)
+        private void cpExpand_OnMouseHover(object sender, EventArgs e)
         {
-            (sender as MyLabel).BackColor = changedColor ;
+            (sender as PictureBox).BackColor = changedColor ;
             this.BackColor = changedColor;
         }
 
@@ -82,9 +73,9 @@ namespace QLCuaHangDT.GUI
         
 
 
-        internal ThietBi ThietBi { get => thietBi; set => thietBi = value; }
+        internal SanPham ThietBi { get => sanPham; set => sanPham = value; }
 
 
-        Color myColor = Color.Gray;
+        
     }
 }

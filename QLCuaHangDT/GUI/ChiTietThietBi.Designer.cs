@@ -42,7 +42,7 @@
             // cpExpand
             // 
             this.cpExpand.Image = ((System.Drawing.Image)(resources.GetObject("cpExpand.Image")));
-            this.cpExpand.Location = new System.Drawing.Point(473, 5);
+            this.cpExpand.Location = new System.Drawing.Point(559, 6);
             this.cpExpand.Name = "cpExpand";
             this.cpExpand.Size = new System.Drawing.Size(47, 47);
             this.cpExpand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -57,10 +57,10 @@
             this.mlKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mlKM.Font = new System.Drawing.Font("UTM Alexander", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mlKM.ForeColor = System.Drawing.Color.White;
-            this.mlKM.Location = new System.Drawing.Point(406, 0);
+            this.mlKM.Location = new System.Drawing.Point(494, 0);
             this.mlKM.Margin = new System.Windows.Forms.Padding(0);
             this.mlKM.Name = "mlKM";
-            this.mlKM.Size = new System.Drawing.Size(64, 56);
+            this.mlKM.Size = new System.Drawing.Size(62, 56);
             this.mlKM.TabIndex = 5;
             this.mlKM.Text = "Có";
             this.mlKM.UseVisualStyleBackColor = true;
@@ -73,10 +73,10 @@
             this.mlConHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mlConHang.Font = new System.Drawing.Font("UTM Alexander", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mlConHang.ForeColor = System.Drawing.Color.White;
-            this.mlConHang.Location = new System.Drawing.Point(332, 0);
+            this.mlConHang.Location = new System.Drawing.Point(412, 0);
             this.mlConHang.Margin = new System.Windows.Forms.Padding(0);
             this.mlConHang.Name = "mlConHang";
-            this.mlConHang.Size = new System.Drawing.Size(64, 56);
+            this.mlConHang.Size = new System.Drawing.Size(52, 56);
             this.mlConHang.TabIndex = 4;
             this.mlConHang.Text = "Còn";
             this.mlConHang.UseVisualStyleBackColor = true;
@@ -89,10 +89,10 @@
             this.mlGia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mlGia.Font = new System.Drawing.Font("UTM Alexander", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mlGia.ForeColor = System.Drawing.Color.White;
-            this.mlGia.Location = new System.Drawing.Point(249, 0);
+            this.mlGia.Location = new System.Drawing.Point(300, 0);
             this.mlGia.Margin = new System.Windows.Forms.Padding(0);
             this.mlGia.Name = "mlGia";
-            this.mlGia.Size = new System.Drawing.Size(83, 56);
+            this.mlGia.Size = new System.Drawing.Size(102, 56);
             this.mlGia.TabIndex = 3;
             this.mlGia.Text = "2 Trieu";
             this.mlGia.UseVisualStyleBackColor = true;
@@ -105,7 +105,7 @@
             this.mlHangSX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mlHangSX.Font = new System.Drawing.Font("UTM Alexander", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mlHangSX.ForeColor = System.Drawing.Color.White;
-            this.mlHangSX.Location = new System.Drawing.Point(165, 0);
+            this.mlHangSX.Location = new System.Drawing.Point(203, 0);
             this.mlHangSX.Margin = new System.Windows.Forms.Padding(0);
             this.mlHangSX.Name = "mlHangSX";
             this.mlHangSX.Size = new System.Drawing.Size(84, 56);
@@ -124,7 +124,7 @@
             this.mlTen.Location = new System.Drawing.Point(53, 0);
             this.mlTen.Margin = new System.Windows.Forms.Padding(0);
             this.mlTen.Name = "mlTen";
-            this.mlTen.Size = new System.Drawing.Size(112, 56);
+            this.mlTen.Size = new System.Drawing.Size(140, 56);
             this.mlTen.TabIndex = 1;
             this.mlTen.Text = "Xaomi Redmi Note 7";
             this.mlTen.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@
             this.mlMa.Size = new System.Drawing.Size(53, 56);
             this.mlMa.TabIndex = 0;
             this.mlMa.Text = "D1";
-            this.mlMa.UseVisualStyleBackColor = false;
+            this.mlMa.UseVisualStyleBackColor = true;
             // 
             // ChiTietThietBi
             // 
@@ -160,7 +160,7 @@
             this.Controls.Add(this.mlMa);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ChiTietThietBi";
-            this.Size = new System.Drawing.Size(523, 56);
+            this.Size = new System.Drawing.Size(609, 56);
             ((System.ComponentModel.ISupportInitialize)(this.cpExpand)).EndInit();
             this.ResumeLayout(false);
 

@@ -1,17 +1,18 @@
 ﻿using QLCuaHangDT.GUI;
 using System;
-using System.Collections.Generic;
+using QLCuaHangDT.DAO;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.Generic;
+using QLCuaHangDT.Model;
 
 namespace QLCuaHangDT.Handler
 {
 
     class QuanLyKhoHandler
     {
+        SanPhamDAO spDAO = new SanPhamDAO();
         private QuanLyKho quanLyKho;
 
         public QuanLyKhoHandler(QuanLyKho quanLyKho)
@@ -19,7 +20,7 @@ namespace QLCuaHangDT.Handler
             this.quanLyKho = quanLyKho;
         }
 
-
+        #region Cac Su Kien 
         internal void Menu_OnClick(object sender, EventArgs e)
         {
             if (quanLyKho.SelectedButton != null)
@@ -56,7 +57,30 @@ namespace QLCuaHangDT.Handler
 
         internal void PictureBox_Click(object sender, MouseEventArgs e)
         {
-            throw new NotImplementedException();
+
         }
+        #endregion
+
+        #region Cac thao tac voi du lieu
+
+        public void LoadDanhSachhangHoa()
+        {
+            List<SanPham> ds = spDAO.layDanhSachSanPham();
+           ds = ds.Where((sanPham) =>
+           {
+               return sanPham.LoaiSanPham == Loai_San_Pham.DIEN_THOAI;
+           }).ToList();
+            
+           
+
+            for (int i  =0; i< ds.Count;i++) {
+                quanLyKho.DsDT.Add( new DienThoai(ds[i]));
+                ChiTietThietBi chiTiet = new ChiTietThietBi(quanLyKho.DsDT[i]);
+                chiTiet.Tag = quanLyKho.DsDT[i].MaSanPham.ToString();
+                quanLyKho.FlowList.Controls.Add(chiTiet);
+            }
+
+        }
+        #endregion
     }
 }

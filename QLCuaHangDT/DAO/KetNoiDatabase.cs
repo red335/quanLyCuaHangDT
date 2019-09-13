@@ -38,11 +38,13 @@ namespace QLCuaHangDT.DAO
         public static DataTable docDuLieu(string query) {
             DataTable table = new DataTable();
             SqlConnection con = KetNoiDatabase.ketNoiDatabase();
+
+            SqlDataAdapter adap;
             try
             {
             //    System.Windows.Forms.MessageBox.Show(query);
                 con.Open();
-                SqlDataAdapter adap = new SqlDataAdapter(query,con);
+            adap    = new SqlDataAdapter(query,con);
                
                 adap.Fill(table);
 
@@ -50,9 +52,11 @@ namespace QLCuaHangDT.DAO
             catch (Exception e)
             {
                 System.Windows.Forms.MessageBox.Show(e.Message);
-                return  null;
+                table =  null;
             }
+            
             con.Close();
+           
             return table;
         }
         #endregion

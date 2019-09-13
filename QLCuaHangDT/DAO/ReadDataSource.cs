@@ -29,7 +29,7 @@ namespace QLCuaHangDT.DAO
         {
             const string fileName= "DataSource.txt";
             const string fileDir = "DataSourceSQL";
-            const string defaultDataSourcesSQL = @"Data Source=LAPTOP-V4KO1KOV\SQLEXPRESS;Initial Catalog=QuanLyCuaHangDienThoai;Integrated Security=True";
+            const string defaultDataSourcesSQL = @"Data Source=LAPTOP-V4KO1KOV\SQLEXPRESS;Initial Catalog=QuanLyCuaHangDienThoai_1;Integrated Security=True";
             string data = "";
             string duongDanFile = path + "/" + fileDir + "/" + fileName;
 

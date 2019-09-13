@@ -12,23 +12,20 @@ namespace QLCuaHangDT.GUI
         public MyLabel()
         {
             this.FlatAppearance.MouseOverBackColor = this.BackColor;
-            //  this.ForeColor = this.ForeColor;
             this.BackColorChanged += (s, e) =>
-            {
-                //   this.ForeColor = this.ForeColor;
+      { 
                 this.FlatAppearance.MouseOverBackColor = this.BackColor;
             };
 
 
             this.FlatAppearance.MouseDownBackColor = this.BackColor;
-            // this.ForeColor = this.ForeColor;
+    
             this.BackColorChanged += (s, e) =>
             {
                 // this.ForeColor = this.ForeColor;
                 this.FlatAppearance.MouseDownBackColor = this.BackColor;
             };
 
-          //  this.MouseHover -= ;
 
         }
     }

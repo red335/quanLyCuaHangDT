@@ -27,6 +27,9 @@ namespace QLCuaHangDT.GUI
                 // this.ForeColor = this.ForeColor;
                 this.FlatAppearance.MouseDownBackColor = this.BackColor;
             };
+
+          //  this.MouseHover -= ;
+
         }
     }
 }

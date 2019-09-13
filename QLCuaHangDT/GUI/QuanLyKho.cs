@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Drawing;
 
 using System.Windows.Forms;
@@ -7,17 +8,16 @@ using QLCuaHangDT.Handler;
 namespace QLCuaHangDT.GUI
 {
     public enum MenuQuanLyKho
-    {   NONE,
+    {  
         DIEN_THOAI,
-        LINH_KIEN,
-        NHAP_HANG
+        LINH_KIEN
     }
     public partial class QuanLyKho : UserControl
     {
         private QuanLyKhoHandler quanLyKhoHandler;
-        private MenuQuanLyKho trangThai = MenuQuanLyKho.NONE;
+        private MenuQuanLyKho trangThai = MenuQuanLyKho.DIEN_THOAI;
         private Button selectedButton = null;
-
+      
         public MenuQuanLyKho TrangThaiMenu { get => trangThai; set => trangThai = value; }
         public Button SelectedButton { get => selectedButton; set => selectedButton = value; }
 
@@ -36,19 +36,30 @@ namespace QLCuaHangDT.GUI
         }
         private void gangSuKien()
         {
-            btnDT.MouseHover += quanLyKhoHandler.Menu_OnMouseHover;
-            btnDT.MouseLeave += quanLyKhoHandler.Menu_OnMouseLeave;
+           
 
-            btnLK.MouseHover += quanLyKhoHandler.Menu_OnMouseHover; 
-            btnLK.MouseLeave += quanLyKhoHandler.Menu_OnMouseLeave;
-
-            btnNH.MouseHover += quanLyKhoHandler.Menu_OnMouseHover;
-            btnNH.MouseLeave += quanLyKhoHandler.Menu_OnMouseLeave;
 
             btnDT.Click += quanLyKhoHandler.Menu_OnClick;
             btnLK.Click += quanLyKhoHandler.Menu_OnClick;
-            btnNH.Click += quanLyKhoHandler.Menu_OnClick;
+
+            pbDelete.MouseClick += quanLyKhoHandler.PictureBox_Click;
+            pbDelete.MouseHover += quanLyKhoHandler.PictureBox_Hover;
+            pbDelete.MouseLeave += quanLyKhoHandler.PictureBox_Leave;
+
+            pbFilter.MouseClick += quanLyKhoHandler.PictureBox_Click;
+            pbFilter.MouseHover += quanLyKhoHandler.PictureBox_Hover;
+            pbFilter.MouseLeave += quanLyKhoHandler.PictureBox_Leave;
+
+            pbSearch.MouseClick += quanLyKhoHandler.PictureBox_Click;
+            pbSearch.MouseHover += quanLyKhoHandler.PictureBox_Hover;
+            pbSearch.MouseLeave += quanLyKhoHandler.PictureBox_Leave;
+
+            pbSort.MouseClick += quanLyKhoHandler.PictureBox_Click;
+            pbSort.MouseHover += quanLyKhoHandler.PictureBox_Hover;
+            pbSort.MouseLeave += quanLyKhoHandler.PictureBox_Leave;
         }
+
+       
     }
 
 

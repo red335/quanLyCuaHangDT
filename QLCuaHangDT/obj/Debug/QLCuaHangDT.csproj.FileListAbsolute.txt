@@ -32,3 +32,5 @@ D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.exe
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.pdb
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GUI.QuanLyKho.resources
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GUI.ChiTietThietBi.resources
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.csprojAssemblyReference.cache
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GUI.DienThoaiChiTiet.resources

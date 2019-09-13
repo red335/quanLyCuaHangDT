@@ -163,17 +163,17 @@
             this.panel1.Controls.Add(this.pictureCircle1);
             this.panel1.Controls.Add(this.pbHide);
             this.panel1.Controls.Add(this.pbExit);
-            this.panel1.Location = new System.Drawing.Point(-9, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1318, 77);
+            this.panel1.Size = new System.Drawing.Size(1275, 77);
             this.panel1.TabIndex = 3;
             // 
             // pictureCircle1
             // 
             this.pictureCircle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
             this.pictureCircle1.Image = ((System.Drawing.Image)(resources.GetObject("pictureCircle1.Image")));
-            this.pictureCircle1.Location = new System.Drawing.Point(1113, 8);
+            this.pictureCircle1.Location = new System.Drawing.Point(1082, 11);
             this.pictureCircle1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureCircle1.Name = "pictureCircle1";
             this.pictureCircle1.Size = new System.Drawing.Size(58, 62);
@@ -187,7 +187,7 @@
             this.pbHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
             this.pbHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbHide.Image = ((System.Drawing.Image)(resources.GetObject("pbHide.Image")));
-            this.pbHide.Location = new System.Drawing.Point(1208, 23);
+            this.pbHide.Location = new System.Drawing.Point(1162, 20);
             this.pbHide.Name = "pbHide";
             this.pbHide.Size = new System.Drawing.Size(45, 46);
             this.pbHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,7 +200,7 @@
             this.pbExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
             this.pbExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
-            this.pbExit.Location = new System.Drawing.Point(1258, 23);
+            this.pbExit.Location = new System.Drawing.Point(1214, 20);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(45, 46);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,7 +213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1305, 809);
+            this.ClientSize = new System.Drawing.Size(1275, 785);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flMenu);
@@ -246,12 +246,12 @@
         private System.Windows.Forms.Button btnTK;
         private System.Windows.Forms.PictureBox pbHide;
         private GUI.PictureCircle pictureCircle1;
-     
+
 
 
 
         //  public System.Windows.Forms.PictureBox PbAvatar { get => pbAvatar; set => pbAvatar = value; }
-       
+
     }
 }
 

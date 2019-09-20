@@ -20,10 +20,11 @@ namespace QLCuaHangDT.DAO
         public static bool thaoTacDuLieu(string query)
         {
             SqlConnection con = KetNoiDatabase.ketNoiDatabase();
+
+            SqlCommand cmd = null;
             bool hopLe = true;
             try
-            {
-                SqlCommand cmd = new SqlCommand(query, con);
+            {   cmd= new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -31,6 +32,7 @@ namespace QLCuaHangDT.DAO
                 System.Windows.Forms.MessageBox.Show(e.Message);
                 hopLe = false;
             }
+            
             con.Close();
 
             return hopLe;
@@ -62,9 +64,9 @@ namespace QLCuaHangDT.DAO
         #endregion
 
         #region Them Xoa Sua
-        abstract protected void Them(string data);
-        abstract protected void Sua();
-        abstract protected void Xoa();
+        abstract public void Them(string data);
+        abstract public void Sua();
+        abstract public void Xoa();
         #endregion
 
     }

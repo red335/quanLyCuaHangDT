@@ -34,12 +34,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnKho = new System.Windows.Forms.Button();
             this.btnNV = new System.Windows.Forms.Button();
-            this.btnTC = new System.Windows.Forms.Button();
+            this.btnNH = new System.Windows.Forms.Button();
             this.btnTK = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureCircle1 = new QLCuaHangDT.GUI.PictureCircle();
             this.pbHide = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
+            this.pnBody = new System.Windows.Forms.Panel();
             this.flMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -50,11 +51,12 @@
             // 
             // flMenu
             // 
-            this.flMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.flMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.flMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flMenu.Controls.Add(this.panel2);
             this.flMenu.Controls.Add(this.btnKho);
             this.flMenu.Controls.Add(this.btnNV);
-            this.flMenu.Controls.Add(this.btnTC);
+            this.flMenu.Controls.Add(this.btnNH);
             this.flMenu.Controls.Add(this.btnTK);
             this.flMenu.Location = new System.Drawing.Point(1, 2);
             this.flMenu.Margin = new System.Windows.Forms.Padding(0, 2, 2, 2);
@@ -118,24 +120,24 @@
             this.btnNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNV.UseVisualStyleBackColor = false;
             // 
-            // btnTC
+            // btnNH
             // 
-            this.btnTC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTC.FlatAppearance.BorderSize = 0;
-            this.btnTC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flMenu.SetFlowBreak(this.btnTC, true);
-            this.btnTC.Font = new System.Drawing.Font("UTM Caviar", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTC.Location = new System.Drawing.Point(0, 186);
-            this.btnTC.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTC.Name = "btnTC";
-            this.btnTC.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnTC.Size = new System.Drawing.Size(257, 36);
-            this.btnTC.TabIndex = 3;
-            this.btnTC.Tag = "TC";
-            this.btnTC.Text = "Thu Chi";
-            this.btnTC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTC.UseVisualStyleBackColor = false;
-            this.btnTC.Click += new System.EventHandler(this.BtnTC_Click);
+            this.btnNH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNH.FlatAppearance.BorderSize = 0;
+            this.btnNH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flMenu.SetFlowBreak(this.btnNH, true);
+            this.btnNH.Font = new System.Drawing.Font("UTM Caviar", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNH.Location = new System.Drawing.Point(0, 186);
+            this.btnNH.Margin = new System.Windows.Forms.Padding(0);
+            this.btnNH.Name = "btnNH";
+            this.btnNH.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
+            this.btnNH.Size = new System.Drawing.Size(257, 36);
+            this.btnNH.TabIndex = 3;
+            this.btnNH.Tag = "NH";
+            this.btnNH.Text = "Nhap Hang";
+            this.btnNH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNH.UseVisualStyleBackColor = false;
+            this.btnNH.Click += new System.EventHandler(this.BtnTC_Click);
             // 
             // btnTK
             // 
@@ -158,7 +160,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.pictureCircle1);
             this.panel1.Controls.Add(this.pbHide);
             this.panel1.Controls.Add(this.pbExit);
@@ -182,11 +184,11 @@
             // pbHide
             // 
             this.pbHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
+            this.pbHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
             this.pbHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbHide.Image = ((System.Drawing.Image)(resources.GetObject("pbHide.Image")));
             this.pbHide.Location = new System.Drawing.Point(944, 13);
-            this.pbHide.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbHide.Margin = new System.Windows.Forms.Padding(2);
             this.pbHide.Name = "pbHide";
             this.pbHide.Size = new System.Drawing.Size(30, 30);
             this.pbHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,16 +198,25 @@
             // pbExit
             // 
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
+            this.pbExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
             this.pbExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
             this.pbExit.Location = new System.Drawing.Point(974, 13);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(30, 30);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbExit.TabIndex = 0;
             this.pbExit.TabStop = false;
+            // 
+            // pnBody
+            // 
+            this.pnBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.pnBody.Location = new System.Drawing.Point(258, 50);
+            this.pnBody.Margin = new System.Windows.Forms.Padding(0);
+            this.pnBody.Name = "pnBody";
+            this.pnBody.Size = new System.Drawing.Size(751, 467);
+            this.pnBody.TabIndex = 4;
             // 
             // Form1
             // 
@@ -215,11 +226,12 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1005, 516);
             this.ControlBox = false;
+            this.Controls.Add(this.pnBody);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flMenu);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ShowIcon = false;
@@ -243,12 +255,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnKho;
         private System.Windows.Forms.Button btnNV;
-        private System.Windows.Forms.Button btnTC;
+        private System.Windows.Forms.Button btnNH;
         private System.Windows.Forms.Button btnTK;
         private System.Windows.Forms.PictureBox pbHide;
         private GUI.PictureCircle pictureCircle1;
+        private System.Windows.Forms.Panel pnBody;
 
-
+        public System.Windows.Forms.Panel PnBody { get => pnBody; set => pnBody = value; }
 
 
         //  public System.Windows.Forms.PictureBox PbAvatar { get => pbAvatar; set => pbAvatar = value; }

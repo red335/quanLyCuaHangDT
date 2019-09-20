@@ -58,17 +58,17 @@ namespace QLCuaHangDT.DAO
         }
         #endregion
         #region Them xoa sua nhan vien
-        protected override void Sua()
+        public override void Sua()
         {
             
         }
 
-        protected override void Them(string data)
+        public override void Them(string data)
         {
            
         }
 
-        protected override void Xoa()
+        public override void Xoa()
         {
             
         }

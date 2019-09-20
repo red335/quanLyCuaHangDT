@@ -74,7 +74,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.flowLayoutPanel1.Controls.Add(this.btnDT);
             this.flowLayoutPanel1.Controls.Add(this.btnLK);
             this.flowLayoutPanel1.Controls.Add(this.pbSort);
@@ -91,7 +91,7 @@
             // 
             // btnDT
             // 
-            this.btnDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btnDT.BackColor = System.Drawing.Color.Gray;
             this.btnDT.FlatAppearance.BorderSize = 0;
             this.btnDT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDT.Font = new System.Drawing.Font("UTM Alexander", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,11 +103,11 @@
             this.btnDT.TabIndex = 0;
             this.btnDT.Tag = "DT";
             this.btnDT.Text = "Điện Thoại";
-            this.btnDT.UseVisualStyleBackColor = true;
+            this.btnDT.UseVisualStyleBackColor = false;
             // 
             // btnLK
             // 
-            this.btnLK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btnLK.BackColor = System.Drawing.Color.Gray;
             this.btnLK.FlatAppearance.BorderSize = 0;
             this.btnLK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLK.Font = new System.Drawing.Font("UTM Alexander", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,19 +117,19 @@
             this.btnLK.Name = "btnLK";
             this.btnLK.Size = new System.Drawing.Size(72, 36);
             this.btnLK.TabIndex = 6;
-            this.btnLK.Tag = "DT";
+            this.btnLK.Tag = "LK";
             this.btnLK.Text = "Linh Kiện";
-            this.btnLK.UseVisualStyleBackColor = true;
+            this.btnLK.UseVisualStyleBackColor = false;
             // 
             // pbSort
             // 
             this.pbSort.BackColor = System.Drawing.Color.White;
             this.pbSort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbSort.Image = ((System.Drawing.Image)(resources.GetObject("pbSort.Image")));
-            this.pbSort.Location = new System.Drawing.Point(531, 10);
-            this.pbSort.Margin = new System.Windows.Forms.Padding(370, 10, 0, 0);
+            this.pbSort.Location = new System.Drawing.Point(611, 13);
+            this.pbSort.Margin = new System.Windows.Forms.Padding(450, 13, 0, 0);
             this.pbSort.Name = "pbSort";
-            this.pbSort.Size = new System.Drawing.Size(30, 30);
+            this.pbSort.Size = new System.Drawing.Size(25, 25);
             this.pbSort.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSort.TabIndex = 2;
             this.pbSort.TabStop = false;
@@ -139,10 +139,10 @@
             this.pbDelete.BackColor = System.Drawing.Color.White;
             this.pbDelete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbDelete.Image = ((System.Drawing.Image)(resources.GetObject("pbDelete.Image")));
-            this.pbDelete.Location = new System.Drawing.Point(564, 10);
-            this.pbDelete.Margin = new System.Windows.Forms.Padding(3, 10, 0, 0);
+            this.pbDelete.Location = new System.Drawing.Point(639, 13);
+            this.pbDelete.Margin = new System.Windows.Forms.Padding(3, 13, 0, 0);
             this.pbDelete.Name = "pbDelete";
-            this.pbDelete.Size = new System.Drawing.Size(30, 30);
+            this.pbDelete.Size = new System.Drawing.Size(25, 25);
             this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDelete.TabIndex = 3;
             this.pbDelete.TabStop = false;
@@ -152,10 +152,10 @@
             this.pbFilter.BackColor = System.Drawing.Color.White;
             this.pbFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFilter.Image = ((System.Drawing.Image)(resources.GetObject("pbFilter.Image")));
-            this.pbFilter.Location = new System.Drawing.Point(597, 10);
-            this.pbFilter.Margin = new System.Windows.Forms.Padding(3, 10, 0, 0);
+            this.pbFilter.Location = new System.Drawing.Point(667, 13);
+            this.pbFilter.Margin = new System.Windows.Forms.Padding(3, 13, 0, 0);
             this.pbFilter.Name = "pbFilter";
-            this.pbFilter.Size = new System.Drawing.Size(30, 30);
+            this.pbFilter.Size = new System.Drawing.Size(25, 25);
             this.pbFilter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFilter.TabIndex = 4;
             this.pbFilter.TabStop = false;
@@ -165,17 +165,17 @@
             this.pbSearch.BackColor = System.Drawing.Color.White;
             this.pbSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbSearch.Image")));
-            this.pbSearch.Location = new System.Drawing.Point(630, 10);
-            this.pbSearch.Margin = new System.Windows.Forms.Padding(3, 10, 0, 0);
+            this.pbSearch.Location = new System.Drawing.Point(695, 13);
+            this.pbSearch.Margin = new System.Windows.Forms.Padding(3, 13, 0, 0);
             this.pbSearch.Name = "pbSearch";
-            this.pbSearch.Size = new System.Drawing.Size(30, 30);
+            this.pbSearch.Size = new System.Drawing.Size(25, 25);
             this.pbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSearch.TabIndex = 5;
             this.pbSearch.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 51);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
@@ -186,6 +186,7 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.panel2.Controls.Add(this.pnContaiNer);
             this.panel2.Controls.Add(this.flowLayoutPanel2);
             this.panel2.Location = new System.Drawing.Point(0, 3);
@@ -200,6 +201,7 @@
             this.pnContaiNer.Controls.Add(this.flowList);
             this.pnContaiNer.Controls.Add(this.flowLayoutPanel3);
             this.pnContaiNer.Location = new System.Drawing.Point(19, 38);
+            this.pnContaiNer.MinimumSize = new System.Drawing.Size(671, 346);
             this.pnContaiNer.Name = "pnContaiNer";
             this.pnContaiNer.Size = new System.Drawing.Size(671, 346);
             this.pnContaiNer.TabIndex = 1;
@@ -210,6 +212,7 @@
             this.flowList.AutoSize = true;
             this.flowList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowList.Location = new System.Drawing.Point(0, 0);
+            this.flowList.MinimumSize = new System.Drawing.Size(629, 200);
             this.flowList.Name = "flowList";
             this.flowList.Size = new System.Drawing.Size(629, 200);
             this.flowList.TabIndex = 3;
@@ -244,7 +247,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
+            this.panel3.BackColor = System.Drawing.Color.Gray;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(20, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -268,7 +271,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
+            this.panel4.BackColor = System.Drawing.Color.Gray;
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(83, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -287,14 +290,14 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(23, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 18);
+            this.label2.Size = new System.Drawing.Size(89, 18);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Tên Điện Thoại";
+            this.label2.Text = "Tên Sản Phẩm";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
+            this.panel5.BackColor = System.Drawing.Color.Gray;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(223, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -320,7 +323,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
+            this.panel6.BackColor = System.Drawing.Color.Gray;
             this.panel6.Controls.Add(this.label4);
             this.panel6.Location = new System.Drawing.Point(326, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -346,7 +349,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
+            this.panel7.BackColor = System.Drawing.Color.Gray;
             this.panel7.Controls.Add(this.label5);
             this.panel7.Location = new System.Drawing.Point(419, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -372,7 +375,7 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
+            this.panel8.BackColor = System.Drawing.Color.Gray;
             this.panel8.Controls.Add(this.label6);
             this.panel8.Location = new System.Drawing.Point(508, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -401,7 +404,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "QuanLyKho";

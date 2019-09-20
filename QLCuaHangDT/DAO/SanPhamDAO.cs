@@ -11,17 +11,17 @@ namespace QLCuaHangDT.DAO
 {
     class SanPhamDAO : KetNoiDatabase
     {
-        protected override void Sua()
+        public override void Sua()
         {
            
         }
 
-        protected override void Them(string data)
+        public override void Them(string data)
         {
             
         }
 
-        protected override void Xoa()
+        public override void Xoa()
         {
 
         }
@@ -29,7 +29,7 @@ namespace QLCuaHangDT.DAO
         public List<SanPham> layDanhSachSanPham() {
             List<SanPham> ds = new List<SanPham>();
             string query = "select MaSP, TenSP ,MaHSX, GiaThanh, HinhAnh, SoLuongConTrongCH, LoaiHang, TenHSX, QuocGia" +
-" from SanPham , NhaSX   where LoaiHang = 'Dien Thoai' and MaHSX = MaNSX";
+" from SanPham , NhaSX   where  MaHSX = MaNSX";
             DataTable table = docDuLieu(query);
             if (table == null || table.Rows.Count <= 0) return null;
 
@@ -37,10 +37,10 @@ namespace QLCuaHangDT.DAO
                 int maHangSX = Convert.ToInt32(row["MaHSX"]);
                 string tenHangSX = Convert.ToString(row["TenHSX"]);
                 string quocGia = Convert.ToString(row["QuocGia"]);
-
+                int maSP = Convert.ToInt32(row["MaSP"]);
                 HangSanXuat hsx = new HangSanXuat(maHangSX, tenHangSX, quocGia);
 
-                int maSP = Convert.ToInt32(row["MaSP"]);
+               
                 string tenSP = Convert.ToString(row["TenSP"]);
                 int gia = Convert.ToInt32(row["GiaThanh"]);
                 int soLuongTonKho = Convert.ToInt32(row["SoLuongConTrongCH"]);

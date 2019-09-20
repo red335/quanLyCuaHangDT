@@ -19,25 +19,30 @@ namespace QLCuaHangDT.GUI
         private MenuQuanLyKho trangThai = MenuQuanLyKho.DIEN_THOAI;
         private Button selectedButton = null;
         List<DienThoai> dsDT = new List<DienThoai>();
+        List<LinhKien> dsLK = new List<LinhKien>();
+
         public MenuQuanLyKho TrangThaiMenu { get => trangThai; set => trangThai = value; }
         public Button SelectedButton { get => selectedButton; set => selectedButton = value; }
         public List<DienThoai> DsDT { get => dsDT; set => dsDT = value; }
         public FlowLayoutPanel FlowList { get => flowList; set => flowList = value; }
+        public List<LinhKien> DsLK { get => dsLK; set => dsLK = value; }
+
         public QuanLyKho(int x = -1, int y = -1)
         {
             InitializeComponent();
-            if (x == -1 && y == -1)
-            {
-                this.Location = new Point(258, 52);
-            }
+            //if (x == -1 && y == -1)
+            //{
+            //    this.Location = new Point(258, 52);
+            //}
             quanLyKhoHandler = new QuanLyKhoHandler(this);
 
        
 
             gangSuKien();
+            quanLyKhoHandler.LoadDanhSachhangHoa();
 
             quanLyKhoHandler.Menu_OnClick(btnDT,EventArgs.Empty);
-            quanLyKhoHandler.LoadDanhSachhangHoa();
+           
         }
         private void gangSuKien()
         {
@@ -46,6 +51,7 @@ namespace QLCuaHangDT.GUI
 
             btnDT.Click += quanLyKhoHandler.Menu_OnClick;
             btnLK.Click += quanLyKhoHandler.Menu_OnClick;
+
 
             pbDelete.MouseClick += quanLyKhoHandler.PictureBox_Click;
             pbDelete.MouseHover += quanLyKhoHandler.PictureBox_Hover;

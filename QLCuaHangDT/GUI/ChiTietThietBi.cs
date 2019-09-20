@@ -29,7 +29,7 @@ namespace QLCuaHangDT.GUI
             InitializeComponent();
             this.sanPham = sanPham;
             myColor_ = this.BackColor;
-            changedColor = Color.FromArgb(255, 128, 0);
+            changedColor = Color.FromArgb(127, 127, 127);
 
             ganeSuKien();
             caiDat();
@@ -48,6 +48,9 @@ namespace QLCuaHangDT.GUI
             mlHangSX.Text = sanPham.HangSanXuatSanPham.TenHangSX;
             mlConHang.Text = sanPham.SoLuongTonKho1 > 0 ? "Còn" : "Hết";
             mlKM.Text = sanPham.CoKhuyenMai == true ? "Có" : "Không";
+
+
+          
         }
 
         private void cpExpand_OnMouseLeave(object sender, EventArgs e)
@@ -59,7 +62,7 @@ namespace QLCuaHangDT.GUI
         private void cpExpand_OnMouseHover(object sender, EventArgs e)
         {
             (sender as PictureBox).BackColor = changedColor ;
-            this.BackColor = changedColor;
+            //this.BackColor = changedColor;
         }
 
         private void cpExpand_ObClick(object sender, EventArgs e)

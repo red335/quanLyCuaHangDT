@@ -23,7 +23,7 @@ namespace QLCuaHangDT
             this.FormClosing += DialogThoat;
             NhanVien = new NhanVien();
             //   this.Load += HienDangNhap;
-
+            PnBody.Controls.Add(new NhapHang());
             gangSuKien();
         }
        
@@ -64,14 +64,14 @@ namespace QLCuaHangDT
             btnKho.MouseLeave += mainHandler.ButtonMouse_Leave;
             btnNV.MouseHover += mainHandler.ButtonMouse_Hover;
             btnNV.MouseLeave += mainHandler.ButtonMouse_Leave;
-            btnTC.MouseHover += mainHandler.ButtonMouse_Hover;
-            btnTC.MouseLeave += mainHandler.ButtonMouse_Leave;
+            btnNH.MouseHover += mainHandler.ButtonMouse_Hover;
+            btnNH.MouseLeave += mainHandler.ButtonMouse_Leave;
             btnTK.MouseHover += mainHandler.ButtonMouse_Hover;
             btnTK.MouseLeave += mainHandler.ButtonMouse_Leave;
 
             //Click Cac button;
             btnKho.Click += mainHandler.BtnMenu_Click;
-
+            btnNH.Click += mainHandler.BtnMenu_Click;
         }
 
         #endregion

@@ -33,13 +33,13 @@ namespace QLCuaHangDT.Handler
                     quanLyKho.TrangThaiMenu = MenuQuanLyKho.DIEN_THOAI;
                     break;
                 case "LK":
-                    quanLyKho.TrangThaiMenu = MenuQuanLyKho.DIEN_THOAI;
+                    quanLyKho.TrangThaiMenu = MenuQuanLyKho.LINH_KIEN;
                     break;
 
             }
             quanLyKho.SelectedButton.BackColor = Color.FromArgb(115, 115, 236);
-
-
+          //   MessageBox.Show(quanLyKho.TrangThaiMenu.ToString());
+            chonLoaiSanPham();
 
         }
 
@@ -47,7 +47,7 @@ namespace QLCuaHangDT.Handler
 
         internal void PictureBox_Leave(object sender, EventArgs e)
         {
-            (sender as PictureBox).BackColor = Color.FromArgb(224, 224, 224);
+            (sender as PictureBox).BackColor = Color.White;
         }
 
         internal void PictureBox_Hover(object sender, EventArgs e)
@@ -66,20 +66,47 @@ namespace QLCuaHangDT.Handler
         public void LoadDanhSachhangHoa()
         {
             List<SanPham> ds = spDAO.layDanhSachSanPham();
-           ds = ds.Where((sanPham) =>
-           {
-               return sanPham.LoaiSanPham == Loai_San_Pham.DIEN_THOAI;
-           }).ToList();
-            
-           
+          
 
-            for (int i  =0; i< ds.Count;i++) {
-                quanLyKho.DsDT.Add( new DienThoai(ds[i]));
-                ChiTietThietBi chiTiet = new ChiTietThietBi(quanLyKho.DsDT[i]);
-                chiTiet.Tag = quanLyKho.DsDT[i].MaSanPham.ToString();
+            List<SanPham> list_1 = ds.Where((sanPham) =>
+            {
+                return sanPham.LoaiSanPham == Loai_San_Pham.DIEN_THOAI;
+            }).ToList();
+
+            List<SanPham> list_2 = ds.Where((sanPham) =>
+            {
+                return sanPham.LoaiSanPham == Loai_San_Pham.LINH_KIEN;
+            }).ToList();
+            for (int i = 0; i < list_1.Count; i++)
+                quanLyKho.DsDT.Add(new DienThoai(list_1[i]));
+           
+            for (int i = 0; i < list_2.Count; i++)
+                quanLyKho.DsLK.Add(new LinhKien(list_2[i]));
+        }
+
+       
+
+            public void hienThiKho(SanPham[] array)
+        {
+            quanLyKho.FlowList.Visible = false;
+            quanLyKho.FlowList.Controls.Clear();
+            foreach (SanPham sanPham in array)
+            {
+                ChiTietThietBi chiTiet = new ChiTietThietBi(sanPham);
+                chiTiet.Tag = sanPham.MaSanPham.ToString();
                 quanLyKho.FlowList.Controls.Add(chiTiet);
             }
-
+            quanLyKho.FlowList.Visible = true;
+        }
+        public void chonLoaiSanPham()
+        {
+            if (quanLyKho.TrangThaiMenu == MenuQuanLyKho.DIEN_THOAI)
+            {
+                hienThiKho(quanLyKho.DsDT.ToArray());
+            }
+            else {
+                hienThiKho(quanLyKho.DsLK.ToArray());
+            }
         }
         #endregion
     }

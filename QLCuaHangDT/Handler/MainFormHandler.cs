@@ -42,24 +42,25 @@ namespace QLCuaHangDT.Handler
         public void ButtonMouse_Hover(object sender, EventArgs e)
         {
 
-            (sender as Button).BackColor = Color.FromArgb(115, 115, 236/*68, 68, 230*/);
+            (sender as Button).BackColor = Color.FromArgb(19,19,19);
 
         }
         public void ButtonMouse_Leave(object sender, EventArgs e)
         {
 
-            (sender as Button).BackColor = Color.FromArgb(19, 19, 19);
+            (sender as Button).BackColor = Color.FromArgb(75, 75, 75);
         }
 
 
         internal void PictureBoxMouse_Hover(object sender, EventArgs e)
         {
-            (sender as PictureBox).BackColor = Color.FromArgb(152, 152, 241);
+            (sender as PictureBox).BackColor = Color.FromArgb(149, 86, 0);
         }
 
         internal void PictureBoxMouse_Leave(object sender, EventArgs e)
         {
-            (sender as PictureBox).BackColor = Color.FromArgb(115, 115, 236);
+            (sender as PictureBox).BackColor = Color.FromArgb(208, 120, 0
+                );
         }
 
         public void btnExit_Click(object sender, EventArgs e)
@@ -78,8 +79,19 @@ namespace QLCuaHangDT.Handler
             string tag = button.Tag.ToString();
             if (tag == "Kho")
             {
+             //   mainForm.PnBody.Visible = false;
+                mainForm.PnBody.Controls.Clear();
                 QuanLyKho qlKho = new QuanLyKho();
-                mainForm.Controls.Add ( qlKho);
+                mainForm.PnBody.Controls.Add ( qlKho);
+              //  mainForm.PnBody.Visible = true;
+            }
+            else if(tag == "NH")
+            {
+                mainForm.PnBody.Controls.Clear();
+                NhapHang nhapHang = new NhapHang();
+                mainForm.PnBody.Controls.Add(nhapHang);
+
+
             }
         }
         #endregion

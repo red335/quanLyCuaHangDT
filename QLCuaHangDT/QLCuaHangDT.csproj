@@ -50,6 +50,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\HangSXDAO.cs" />
     <Compile Include="DAO\KetNoiDatabase.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\QuyenHanDAO.cs" />
@@ -82,6 +83,18 @@
     <Compile Include="GUI\MyLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="GUI\NhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhapHang.Designer.cs">
+      <DependentUpon>NhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhaSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaSX.Designer.cs">
+      <DependentUpon>NhaSX.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PictureCircle.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -95,6 +108,7 @@
     <Compile Include="Handler\QuanLyKhoHandler.cs" />
     <Compile Include="Model\DienThoai.cs" />
     <Compile Include="Model\HangSanXuat.cs" />
+    <Compile Include="Model\LinhKien.cs" />
     <Compile Include="Model\NhanVien.cs" />
     <Compile Include="Model\SanPham.cs" />
     <Compile Include="Program.cs" />
@@ -110,6 +124,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhapHang.resx">
+      <DependentUpon>NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaSX.resx">
+      <DependentUpon>NhaSX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyKho.resx">
       <DependentUpon>QuanLyKho.cs</DependentUpon>

@@ -29,206 +29,194 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.flMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnKho = new System.Windows.Forms.Button();
-            this.btnNV = new System.Windows.Forms.Button();
-            this.btnNH = new System.Windows.Forms.Button();
-            this.btnTK = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureCircle1 = new QLCuaHangDT.GUI.PictureCircle();
-            this.pbHide = new System.Windows.Forms.PictureBox();
-            this.pbExit = new System.Windows.Forms.PictureBox();
-            this.pnBody = new System.Windows.Forms.Panel();
-            this.flMenu.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.myLabel1 = new QLCuaHangDT.GUI.MyLabel();
+            this.pbNews = new System.Windows.Forms.PictureBox();
+            this.pbUser = new System.Windows.Forms.PictureBox();
+            this.pbMinisize = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnKhoHang = new System.Windows.Forms.Button();
+            this.btnNhapHang = new System.Windows.Forms.Button();
+            this.pnCenter = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCircle1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNews)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinisize)).BeginInit();
+            this.flpMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flMenu
+            // panel1
             // 
-            this.flMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.flMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flMenu.Controls.Add(this.panel2);
-            this.flMenu.Controls.Add(this.btnKho);
-            this.flMenu.Controls.Add(this.btnNV);
-            this.flMenu.Controls.Add(this.btnNH);
-            this.flMenu.Controls.Add(this.btnTK);
-            this.flMenu.Location = new System.Drawing.Point(1, 2);
-            this.flMenu.Margin = new System.Windows.Forms.Padding(0, 2, 2, 2);
-            this.flMenu.Name = "flMenu";
-            this.flMenu.Padding = new System.Windows.Forms.Padding(0, 50, 0, 0);
-            this.flMenu.Size = new System.Drawing.Size(257, 581);
-            this.flMenu.TabIndex = 1;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(134)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.myLabel1);
+            this.panel1.Controls.Add(this.pbNews);
+            this.panel1.Controls.Add(this.pbUser);
+            this.panel1.Controls.Add(this.pbMinisize);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(789, 57);
+            this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // pictureBox1
             // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 50);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(257, 64);
-            this.panel2.TabIndex = 0;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, -36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 127);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // myLabel1
+            // 
+            this.myLabel1.BackColor = System.Drawing.Color.Red;
+            this.myLabel1.FlatAppearance.BorderSize = 0;
+            this.myLabel1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.myLabel1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.myLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.myLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myLabel1.Location = new System.Drawing.Point(671, 21);
+            this.myLabel1.Margin = new System.Windows.Forms.Padding(0);
+            this.myLabel1.Name = "myLabel1";
+            this.myLabel1.Size = new System.Drawing.Size(17, 17);
+            this.myLabel1.TabIndex = 4;
+            this.myLabel1.Text = "1";
+            this.myLabel1.UseVisualStyleBackColor = false;
+            this.myLabel1.Visible = false;
+            // 
+            // pbNews
+            // 
+            this.pbNews.Image = ((System.Drawing.Image)(resources.GetObject("pbNews.Image")));
+            this.pbNews.Location = new System.Drawing.Point(659, 6);
+            this.pbNews.Name = "pbNews";
+            this.pbNews.Size = new System.Drawing.Size(25, 25);
+            this.pbNews.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbNews.TabIndex = 3;
+            this.pbNews.TabStop = false;
+            this.pbNews.Tag = "hover";
+            // 
+            // pbUser
+            // 
+            this.pbUser.Image = ((System.Drawing.Image)(resources.GetObject("pbUser.Image")));
+            this.pbUser.Location = new System.Drawing.Point(690, 6);
+            this.pbUser.Name = "pbUser";
+            this.pbUser.Size = new System.Drawing.Size(25, 25);
+            this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUser.TabIndex = 2;
+            this.pbUser.TabStop = false;
+            this.pbUser.Tag = "hover";
+            // 
+            // pbMinisize
+            // 
+            this.pbMinisize.Image = ((System.Drawing.Image)(resources.GetObject("pbMinisize.Image")));
+            this.pbMinisize.Location = new System.Drawing.Point(721, 6);
+            this.pbMinisize.Name = "pbMinisize";
+            this.pbMinisize.Size = new System.Drawing.Size(25, 25);
+            this.pbMinisize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMinisize.TabIndex = 1;
+            this.pbMinisize.TabStop = false;
+            this.pbMinisize.Tag = "hover";
+            this.pbMinisize.Click += new System.EventHandler(this.PictureBox1_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExit.Location = new System.Drawing.Point(752, 6);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(25, 25);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Tag = "hover";
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // flpMenu
+            // 
+            this.flpMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
+            this.flpMenu.Controls.Add(this.label1);
+            this.flpMenu.Controls.Add(this.btnKhoHang);
+            this.flpMenu.Controls.Add(this.btnNhapHang);
+            this.flpMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flpMenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpMenu.Location = new System.Drawing.Point(0, 57);
+            this.flpMenu.Name = "flpMenu";
+            this.flpMenu.Size = new System.Drawing.Size(178, 559);
+            this.flpMenu.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UTM Alexander", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 19);
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(35, 10, 3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 31);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Menu";
+            this.label1.Size = new System.Drawing.Size(98, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MENU";
             // 
-            // btnKho
+            // btnKhoHang
             // 
-            this.btnKho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnKho.FlatAppearance.BorderSize = 0;
-            this.btnKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flMenu.SetFlowBreak(this.btnKho, true);
-            this.btnKho.Font = new System.Drawing.Font("UTM Caviar", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKho.Location = new System.Drawing.Point(0, 114);
-            this.btnKho.Margin = new System.Windows.Forms.Padding(0);
-            this.btnKho.Name = "btnKho";
-            this.btnKho.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnKho.Size = new System.Drawing.Size(257, 36);
-            this.btnKho.TabIndex = 1;
-            this.btnKho.Tag = "Kho";
-            this.btnKho.Text = "Kho";
-            this.btnKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKho.UseVisualStyleBackColor = false;
+            this.btnKhoHang.FlatAppearance.BorderSize = 0;
+            this.btnKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhoHang.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.btnKhoHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhoHang.Image")));
+            this.btnKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhoHang.Location = new System.Drawing.Point(0, 48);
+            this.btnKhoHang.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnKhoHang.Name = "btnKhoHang";
+            this.btnKhoHang.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnKhoHang.Size = new System.Drawing.Size(178, 35);
+            this.btnKhoHang.TabIndex = 2;
+            this.btnKhoHang.Tag = "KHO_HANG";
+            this.btnKhoHang.Text = "Kho Hàng";
+            this.btnKhoHang.UseVisualStyleBackColor = true;
             // 
-            // btnNV
+            // btnNhapHang
             // 
-            this.btnNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNV.FlatAppearance.BorderSize = 0;
-            this.btnNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flMenu.SetFlowBreak(this.btnNV, true);
-            this.btnNV.Font = new System.Drawing.Font("UTM Caviar", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNV.Location = new System.Drawing.Point(0, 150);
-            this.btnNV.Margin = new System.Windows.Forms.Padding(0);
-            this.btnNV.Name = "btnNV";
-            this.btnNV.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnNV.Size = new System.Drawing.Size(257, 36);
-            this.btnNV.TabIndex = 2;
-            this.btnNV.Tag = "NV";
-            this.btnNV.Text = "Nhan Vien";
-            this.btnNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNV.UseVisualStyleBackColor = false;
+            this.btnNhapHang.FlatAppearance.BorderSize = 0;
+            this.btnNhapHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhapHang.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhapHang.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapHang.Image")));
+            this.btnNhapHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhapHang.Location = new System.Drawing.Point(0, 88);
+            this.btnNhapHang.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnNhapHang.Name = "btnNhapHang";
+            this.btnNhapHang.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnNhapHang.Size = new System.Drawing.Size(178, 35);
+            this.btnNhapHang.TabIndex = 1;
+            this.btnNhapHang.Tag = "NHAN_VIEN";
+            this.btnNhapHang.Text = "Nhân Viên";
+            this.btnNhapHang.UseVisualStyleBackColor = true;
             // 
-            // btnNH
+            // pnCenter
             // 
-            this.btnNH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNH.FlatAppearance.BorderSize = 0;
-            this.btnNH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flMenu.SetFlowBreak(this.btnNH, true);
-            this.btnNH.Font = new System.Drawing.Font("UTM Caviar", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNH.Location = new System.Drawing.Point(0, 186);
-            this.btnNH.Margin = new System.Windows.Forms.Padding(0);
-            this.btnNH.Name = "btnNH";
-            this.btnNH.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnNH.Size = new System.Drawing.Size(257, 36);
-            this.btnNH.TabIndex = 3;
-            this.btnNH.Tag = "NH";
-            this.btnNH.Text = "Nhap Hang";
-            this.btnNH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNH.UseVisualStyleBackColor = false;
-            this.btnNH.Click += new System.EventHandler(this.BtnTC_Click);
-            // 
-            // btnTK
-            // 
-            this.btnTK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTK.FlatAppearance.BorderSize = 0;
-            this.btnTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flMenu.SetFlowBreak(this.btnTK, true);
-            this.btnTK.Font = new System.Drawing.Font("UTM Caviar", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTK.Location = new System.Drawing.Point(0, 222);
-            this.btnTK.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTK.Name = "btnTK";
-            this.btnTK.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnTK.Size = new System.Drawing.Size(257, 36);
-            this.btnTK.TabIndex = 4;
-            this.btnTK.Tag = "TK";
-            this.btnTK.Text = "Tai Khoan";
-            this.btnTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTK.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.pictureCircle1);
-            this.panel1.Controls.Add(this.pbHide);
-            this.panel1.Controls.Add(this.pbExit);
-            this.panel1.Location = new System.Drawing.Point(-6, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1015, 50);
-            this.panel1.TabIndex = 3;
-            // 
-            // pictureCircle1
-            // 
-            this.pictureCircle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(236)))));
-            this.pictureCircle1.Image = ((System.Drawing.Image)(resources.GetObject("pictureCircle1.Image")));
-            this.pictureCircle1.Location = new System.Drawing.Point(905, 3);
-            this.pictureCircle1.Name = "pictureCircle1";
-            this.pictureCircle1.Size = new System.Drawing.Size(39, 40);
-            this.pictureCircle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureCircle1.TabIndex = 2;
-            this.pictureCircle1.TabStop = false;
-            // 
-            // pbHide
-            // 
-            this.pbHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
-            this.pbHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbHide.Image = ((System.Drawing.Image)(resources.GetObject("pbHide.Image")));
-            this.pbHide.Location = new System.Drawing.Point(944, 13);
-            this.pbHide.Margin = new System.Windows.Forms.Padding(2);
-            this.pbHide.Name = "pbHide";
-            this.pbHide.Size = new System.Drawing.Size(30, 30);
-            this.pbHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbHide.TabIndex = 1;
-            this.pbHide.TabStop = false;
-            // 
-            // pbExit
-            // 
-            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
-            this.pbExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
-            this.pbExit.Location = new System.Drawing.Point(974, 13);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(30, 30);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbExit.TabIndex = 0;
-            this.pbExit.TabStop = false;
-            // 
-            // pnBody
-            // 
-            this.pnBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.pnBody.Location = new System.Drawing.Point(258, 50);
-            this.pnBody.Margin = new System.Windows.Forms.Padding(0);
-            this.pnBody.Name = "pnBody";
-            this.pnBody.Size = new System.Drawing.Size(751, 467);
-            this.pnBody.TabIndex = 4;
+            this.pnCenter.Location = new System.Drawing.Point(178, 57);
+            this.pnCenter.Name = "pnCenter";
+            this.pnCenter.Size = new System.Drawing.Size(611, 559);
+            this.pnCenter.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1005, 516);
+            this.ClientSize = new System.Drawing.Size(789, 616);
             this.ControlBox = false;
-            this.Controls.Add(this.pnBody);
+            this.Controls.Add(this.pnCenter);
+            this.Controls.Add(this.flpMenu);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flMenu);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -236,32 +224,35 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.flMenu.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCircle1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNews)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinisize)).EndInit();
+            this.flpMenu.ResumeLayout(false);
+            this.flpMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
-        #endregion
-        private System.Windows.Forms.FlowLayoutPanel flMenu;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pbExit;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pbMinisize;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox pbNews;
+        private System.Windows.Forms.PictureBox pbUser;
+        private GUI.MyLabel myLabel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.FlowLayoutPanel flpMenu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnKho;
-        private System.Windows.Forms.Button btnNV;
-        private System.Windows.Forms.Button btnNH;
-        private System.Windows.Forms.Button btnTK;
-        private System.Windows.Forms.PictureBox pbHide;
-        private GUI.PictureCircle pictureCircle1;
-        private System.Windows.Forms.Panel pnBody;
+        private System.Windows.Forms.Button btnKhoHang;
+        private System.Windows.Forms.Button btnNhapHang;
+        private System.Windows.Forms.Panel pnCenter;
+        //   private GiaoDien.SanPham.QLKho qlKho1;
+        //     private GiaoDien.SanPham.QLKho qlKho1;
 
-        public System.Windows.Forms.Panel PnBody { get => pnBody; set => pnBody = value; }
+        #endregion
+
+        //  public System.Windows.Forms.Panel PnBody { get => pnBody; set => pnBody = value; }
 
 
         //  public System.Windows.Forms.PictureBox PbAvatar { get => pbAvatar; set => pbAvatar = value; }

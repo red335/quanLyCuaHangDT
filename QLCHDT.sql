@@ -16,7 +16,6 @@ create table TaiKhoan(
 create table NhanVien(
    MaNV int identity constraint PK_MaNV primary key,
    HoTen nvarchar(30) Not Null,
-   SoCMND int Not Null,
    NgaySinh varchar(18) Not Null,
    GioiTinh nvarchar(9) check( GioiTinh in( 'Nam',N'Nữ')),
    QueQuan nvarchar(100) Not Null,
@@ -83,20 +82,20 @@ insert into TaiKhoan( TenTaiKhoan, MatKhau, TenHienThi, LoaiTaiKhoan)
 values ('9989','toan12jjh34','chuanhtoan',N'Nhân viên')
 
 -- chen du lieu bang Nhanvien
-insert into NhanVien( HoTen, SoCMND, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
-values (N'Nguyễn Phúc Hoài Linh', 585107,'10/2/1994','Nam',N'Đồng Tháp','012365478', 1, N'Chủ cửa hàng')
-insert into NhanVien( HoTen, SoCMND, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
-values (N'Nguyễn Đăng Khoa', 585108,'18/9/1994','Nam',N'Tiền Giang','012358745', 2, N'Quản lý')
-insert into NhanVien( HoTen, SoCMND, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
-values (N'Nguyễn Trung Kiên', 585109,'10/4/1994','Nam',N'Đồng Tháp','012485475', 3, N'Nhân viên')
-insert into NhanVien( HoTen, SoCMND, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
-values (N'Nguyễn Thanh Lộc', 585101,'10/5/1994',N'Nữ',N'Đồng Nai','012365478', 4, N'Nhân viên')
-insert into NhanVien( HoTen, SoCMND, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
-values (N'Huỳnh Tuấn Anh', 585102,'10/6/1994','Nam',N'Đồng Nai','012365418', 5, N'Nhân viên')
-insert into NhanVien( HoTen, SoCMND, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
-values (N'Chu Anh Toàn', 585103,'10/4/1994',N'Nữ',N'Kon Tum','012365428', 6, N'Nhân viên')
-insert into NhanVien( HoTen, SoCMND, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
-values (N'uooio', 585103,'10/4/1994',N'Nữ',N'Kon Tum','012365428', 7, N'Nhân viên')
+insert into NhanVien( HoTen, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
+values (N'Nguyễn Phúc Hoài Linh','1994/02/12','Nam',N'Đồng Tháp','012365478', 1, N'Chủ cửa hàng')
+insert into NhanVien( HoTen, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
+values (N'Nguyễn Đăng Khoa','1994/5/14','Nam',N'Tiền Giang','012358745', 2, N'Quản lý')
+insert into NhanVien( HoTen, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
+values (N'Nguyễn Trung Kiên','1994/10/4','Nam',N'Đồng Tháp','012485475', 3, N'Nhân viên')
+insert into NhanVien( HoTen, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
+values (N'Nguyễn Thanh Lộc','1994/5/10',N'Nữ',N'Đồng Nai','012365478', 4, N'Nhân viên')
+insert into NhanVien( HoTen, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
+values (N'Huỳnh Tuấn Anh','1994/6/10','Nam',N'Đồng Nai','012365418', 5, N'Nhân viên')
+insert into NhanVien( HoTen, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
+values (N'Chu Anh Toàn', '1994/7/1',N'Nữ',N'Kon Tum','012365428', 6, N'Nhân viên')
+insert into NhanVien( HoTen, NgaySinh, GioiTinh, QueQuan, Sdt, MaID, ChucVu)
+values (N'kjahdfjhdsj', '1994/3/10',N'Nữ',N'Kon Tum','012365428', 7, N'Nhân viên')
 
 -- nhap du lieu bang NhaSX
 insert into NhaSX( TenHSX, QuocGia)  -- 1

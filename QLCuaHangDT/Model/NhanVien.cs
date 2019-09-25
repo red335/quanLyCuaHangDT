@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace QLCuaHangDT.Model
 {
-    class NhanVien
+    public class NhanVien
     {
         private int iDNhanVien;
         private string hoTen;
-        private string namSinh;
+        private DateTime namSinh;
         private string queQuan;
         private string SDT;
         private bool gioiTinh;
@@ -19,7 +19,7 @@ namespace QLCuaHangDT.Model
         private string avatar;
         private string tenHienThi;
         List<int> quyenHanNhanVien = new List<int>();
-        public NhanVien(int iDNhanVien, string hoTen, string namSinh, string queQuan, string sDT, bool gioiTinh, int idTaiKhoan, string chucVu)
+        public NhanVien(int iDNhanVien, string hoTen, DateTime namSinh, string queQuan, string sDT, bool gioiTinh, int idTaiKhoan, string chucVu)
         {
             this.iDNhanVien = iDNhanVien;
             this.hoTen = hoTen;
@@ -33,7 +33,7 @@ namespace QLCuaHangDT.Model
 
         public int IdNhanVien { get => iDNhanVien; set => iDNhanVien = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
-        public string NamSinh { get => namSinh; set => namSinh = value; }
+        public DateTime NamSinh { get => namSinh; set => namSinh = value; }
         public string QueQuan { get => queQuan; set => queQuan = value; }
         public string SDT1 { get => SDT; set => SDT = value; }
         public bool GioiTinh { get => gioiTinh; set => gioiTinh = value; }
@@ -48,7 +48,7 @@ namespace QLCuaHangDT.Model
 
         }
 
-        public NhanVien(int iDNhanVien, string hoTen, string namSinh, string queQuan, string sDT, bool gioiTinh, int idTaiKhoan, string chucVu, string avatar, string tenHienThi)
+        public NhanVien(int iDNhanVien, string hoTen, DateTime namSinh, string queQuan, string sDT, bool gioiTinh, int idTaiKhoan, string chucVu, string avatar, string tenHienThi)
         {
             this.iDNhanVien = iDNhanVien;
             this.hoTen = hoTen;

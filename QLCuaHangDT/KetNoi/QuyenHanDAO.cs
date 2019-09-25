@@ -8,7 +8,7 @@ namespace QLCuaHangDT.DAO
     {
         public static List<int> LayDanhSachPhanQuyen(int maNhanVien) {
             List<int> ds = new List<int>();
-            string query = "select maChucNang from PhanQuyenNhanVien where maNhanVien = " + maNhanVien;
+            string query = "select MaCN from PhanQuyenNhanVien where MaNV = " + maNhanVien;
             DataTable table = KetNoiDatabase.docDuLieu(query);
             foreach (DataRow row in table.Rows) 
                 ds.Add((int)row[0]);

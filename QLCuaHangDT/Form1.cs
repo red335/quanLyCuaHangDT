@@ -2,32 +2,92 @@
 using System.Drawing;
 using System.Windows.Forms;
 using QLCuaHangDT.GUI;
-using QLCuaHangDT.Handler;
+
 using QLCuaHangDT.Model;
 using QLCuaHangDT.DAO;
+using QLCuaHangDT.GiaoDien.SanPham;
+using QLCuaHangDT.GiaoDien.NhanVienGiaoDien;
+
+public enum MENU_TAG
+{
+    NONE,
+    KHO_HANG,
+    NHAN_VIEN
+}
 namespace QLCuaHangDT
 {
-    public delegate void batMoForm1  ();
+    public delegate void batMoForm1();
+
     public partial class Form1 : Form
     {
-        private NhanVienDAO nvDao = new NhanVienDAO();
-        private MainFormHandler mainHandler ;
-        private NhanVien nhanVien;
-  
-        internal NhanVien NhanVien { get => nhanVien; set => nhanVien = value; }
-      
+        private Color colorMenuOnHover = Color.FromArgb(255, 171, 79);
+        private Button currentButton = null;
+        private MENU_TAG tag_menu;
         public Form1()
         {
             InitializeComponent();
-            mainHandler = new MainFormHandler(this); 
-            this.FormClosing += DialogThoat;
-            NhanVien = new NhanVien();
-            //   this.Load += HienDangNhap;
-            PnBody.Controls.Add(new NhapHang());
-            gangSuKien();
+            GangSuKienChoControl();
         }
-       
-       
+
+        #region suKien
+        private void GangSuKienChoControl()
+        {
+            //them su kien cho cac nut thoat, thu nho , username, thong bao
+            this.btnExit.MouseLeave += this.OnLeaveControlsBox;
+            this.btnExit.MouseHover += this.OnHoverControlsBox;
+            this.pbMinisize.MouseHover += this.OnHoverControlsBox;
+            this.pbMinisize.MouseLeave += this.OnLeaveControlsBox;
+            this.pbNews.MouseLeave += this.OnLeaveControlsBox;
+            this.pbNews.MouseHover += this.OnHoverControlsBox;
+            this.pbUser.MouseLeave += this.OnLeaveControlsBox;
+            this.pbUser.MouseHover += this.OnHoverControlsBox;
+
+            //Them su kien cho menu ben trai cua ung dung
+            this.btnKhoHang.Click += this.OnClickMenu;
+            this.btnNhapHang.Click += this.OnClickMenu;
+        
+        }
+
+      
+
+        private void OnClickMenu(object sender, EventArgs e)
+        {
+            if(currentButton != null)
+                currentButton.BackColor = flpMenu.BackColor;
+            Button button = sender as Button;
+            button.BackColor = colorMenuOnHover;
+            currentButton = button;
+
+
+            //Khong cho phep mo nhieu hon 1 menu cung luc
+            if (tag_menu.ToString() == currentButton.Tag.ToString()) return;
+
+            pnCenter.Controls.Clear();
+            // Su kien nay dung de chuyen doi mang hinh
+            if ( currentButton.Tag.ToString() == "KHO_HANG") {
+                pnCenter.Controls.Add(new QLKho());
+                tag_menu = MENU_TAG.KHO_HANG;   
+            }
+            // Su kien nay dung de chuyen doi mang hinh
+            else if ( currentButton.Tag.ToString() == "NHAN_VIEN")
+            {
+                pnCenter.Controls.Add(new QuanLyNhanVien());
+                tag_menu = MENU_TAG.NHAN_VIEN;
+            }
+            
+        }
+
+        private void OnHoverControlsBox(object sender, EventArgs e)
+        {
+            (sender as Control).BackColor = Color.FromArgb(255, 173, 83);
+        }
+        private void OnLeaveControlsBox(object sender, EventArgs e)
+        {
+            (sender as Control).BackColor = panel1.BackColor;
+        }
+        
+
+        #endregion
 
         #region Dong Va Mo Form
         private void DialogThoat(object sender, FormClosingEventArgs e)
@@ -39,40 +99,14 @@ namespace QLCuaHangDT
 
         public void ThoatForm()
         {
-           
+
             this.Close();
         }
-        public void LoadForm1() {
-            this.Show();
-            gangSuKien();
-            NhanVien = nvDao.layMotNhanVien(NhanVien.IdTaiKhoan);
-            mainHandler.loadAvatar();
-        }
-        public void gangSuKien()
+        public void LoadForm1()
         {
-            mainHandler.loadAvatar();
-            pbExit.Click +=mainHandler.btnExit_Click;
-            pbExit.MouseHover += mainHandler.PictureBoxMouse_Hover;
-            pbExit.MouseLeave += mainHandler.PictureBoxMouse_Leave;
-           
-            pbHide.MouseHover += mainHandler.PictureBoxMouse_Hover;
-            pbHide.MouseLeave += mainHandler.PictureBoxMouse_Leave;
-            pbHide.Click += mainHandler.btnHide_Click;
-
-
-            btnKho.MouseHover += mainHandler.ButtonMouse_Hover;
-            btnKho.MouseLeave += mainHandler.ButtonMouse_Leave;
-            btnNV.MouseHover += mainHandler.ButtonMouse_Hover;
-            btnNV.MouseLeave += mainHandler.ButtonMouse_Leave;
-            btnNH.MouseHover += mainHandler.ButtonMouse_Hover;
-            btnNH.MouseLeave += mainHandler.ButtonMouse_Leave;
-            btnTK.MouseHover += mainHandler.ButtonMouse_Hover;
-            btnTK.MouseLeave += mainHandler.ButtonMouse_Leave;
-
-            //Click Cac button;
-            btnKho.Click += mainHandler.BtnMenu_Click;
-            btnNH.Click += mainHandler.BtnMenu_Click;
+            this.Show();
         }
+
 
         #endregion
 
@@ -80,16 +114,21 @@ namespace QLCuaHangDT
         private void HienDangNhap(object o, EventArgs e)
         {
 
-            FormDangNhap formDangNhap = new FormDangNhap(this);
+            //FormDangNhap formDangNhap = new FormDangNhap(ths);
             this.Hide();
-            formDangNhap.ShowDialog();
+
         }
 
-        private void BtnTC_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 
-  
+
 }

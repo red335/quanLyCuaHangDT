@@ -16,14 +16,17 @@ namespace QLCuaHangDT.DAO
             if (table == null || table.Rows.Count == 0) return null;
 
             foreach (DataRow row in table.Rows) {
-                int id = (int)row["maNhanVien"];
-                string hoTen =Convert.ToString(row["hoTen"]);
-                string namSinh = Convert.ToString(row["namSinh"]);
-                string queQuan = Convert.ToString(row["queQuan"]);
-                string sdt = Convert.ToString(row["SDT"]);
-                bool gioiTinh = Convert.ToBoolean (row["gioiTinh"]);
-                int idTaiKhoan = (int)row["taiKhoanID"];
-                string tenChucVu = Convert.ToString(row["tenChucVu"]);
+                int id = (int)row[0];
+                string hoTen =Convert.ToString(row[1]);
+                string n = Convert.ToString(row[2]);
+                DateTime namSinh = DateTime.Parse(n);
+
+                bool gioiTinh = Convert.ToString(row[3]) == "Nam"?true:false ;
+                string queQuan = Convert.ToString(row[4]);
+                string sdt = Convert.ToString(row[5]);
+                
+                int idTaiKhoan = (int)row[6];
+                string tenChucVu = Convert.ToString(row[7]);
                 NhanVien nv = new NhanVien(id, hoTen, namSinh, queQuan, sdt, gioiTinh,idTaiKhoan,tenChucVu);
                 nv.QuyenHanNhanVien = QuyenHanDAO.LayDanhSachPhanQuyen(nv.IdNhanVien);
                 ds.Add(nv);
@@ -45,7 +48,7 @@ namespace QLCuaHangDT.DAO
             {
                 int id = (int)row["maNhanVien"];
                 string hoTen = Convert.ToString(row["hoTen"]);
-                string namSinh = Convert.ToString(row["namSinh"]);
+                DateTime namSinh = Convert.ToDateTime(row["namSinh"]);
                 string queQuan = Convert.ToString(row["queQuan"]);
                 string sdt = Convert.ToString(row["SDT"]);
                 bool gioiTinh = Convert.ToBoolean(row["gioiTinh"]);

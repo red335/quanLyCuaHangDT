@@ -5,14 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public enum Loai_San_Pham {
-  DIEN_THOAI,
-  LINH_KIEN
-}
+
 namespace QLCuaHangDT.Model
 {
-    
-      public class SanPham
+    public enum Loai_San_Pham
+    {
+        DIEN_THOAI,
+        LINH_KIEN
+    }
+
+    public class SanPham
     {
         private int maSanPham;
         private string tenSanPham;

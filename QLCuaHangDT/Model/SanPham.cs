@@ -27,8 +27,7 @@ namespace QLCuaHangDT.Model
 
         public SanPham()
         {
-
-
+            this.HangSanXuatSanPham = new HangSanXuat();
         }
 
         public SanPham(int maSanPham, string tenSanPham, Loai_San_Pham loaiSanPham, int gia, HangSanXuat hangSanXuatSanPham, int soLuongTonKho, bool coKhuyenMai, string hinhAnh)
@@ -69,5 +68,20 @@ namespace QLCuaHangDT.Model
         public bool CoKhuyenMai { get => coKhuyenMai; set => coKhuyenMai = value; }
         public string DuongDanHinhAnh { get => duongDanHinhAnh; set => duongDanHinhAnh = value; }
         internal HangSanXuat HangSanXuatSanPham { get => hangSanXuatSanPham; set => hangSanXuatSanPham = value; }
+
+        public string toStringForFitler()
+        {
+            string dat = "";
+            dat +="Ma SP: "+ MaSanPham.ToString() + ";";
+            dat += "Ten SP: " + TenSanPham + ";";
+            dat += "Loai SP: " + LoaiSanPham.ToString() + ";";
+            dat += "Gia: " + Gia.ToString().ToString() + ";";
+            dat += "Hang SX: " + HangSanXuatSanPham.TenHangSX + ";";
+            dat += "So Ton Kho: " + SoLuongTonKho1.ToString() + ";";
+            dat += "Co KM: " + CoKhuyenMai.ToString() ;
+          
+
+            return dat;
+        }
     }
 }

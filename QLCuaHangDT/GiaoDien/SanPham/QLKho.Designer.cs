@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnMenuQuanLy = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnNH = new System.Windows.Forms.Button();
             this.btnLK = new System.Windows.Forms.Button();
             this.btnDT = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@
             // pnMenuQuanLy
             // 
             this.pnMenuQuanLy.BackColor = System.Drawing.Color.White;
+            this.pnMenuQuanLy.Controls.Add(this.btnReset);
             this.pnMenuQuanLy.Controls.Add(this.btnNH);
             this.pnMenuQuanLy.Controls.Add(this.btnLK);
             this.pnMenuQuanLy.Controls.Add(this.btnDT);
@@ -50,6 +52,22 @@
             this.pnMenuQuanLy.Name = "pnMenuQuanLy";
             this.pnMenuQuanLy.Size = new System.Drawing.Size(916, 63);
             this.pnMenuQuanLy.TabIndex = 0;
+            // 
+            // btnReset
+            // 
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnReset.Location = new System.Drawing.Point(793, 6);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(112, 54);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Text = "BACK";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Visible = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnNH
             // 
@@ -141,6 +159,7 @@
         private System.Windows.Forms.Button btnLK;
         private System.Windows.Forms.Button btnNH;
         private System.Windows.Forms.Panel pnCenter;
+        private System.Windows.Forms.Button btnReset;
 
 
         //   private System.Windows.Forms.Button button1;

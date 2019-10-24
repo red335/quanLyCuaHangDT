@@ -16,6 +16,8 @@ namespace QLCuaHangDT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+           // string da = new QLCuaHangDT.Model.SanPham().toStringForFitler();
+
             Application.Run(new Form1());
         }
     }

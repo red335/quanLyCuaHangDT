@@ -52,6 +52,8 @@
             this.pnAnhDaiDien = new System.Windows.Forms.Panel();
             this.btnNewHinhAnh = new System.Windows.Forms.Button();
             this.pbAnhDaiDien = new System.Windows.Forms.PictureBox();
+            this.cntXoaHA = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.xoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnNgayNhap = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.mTxtNgayNhap = new System.Windows.Forms.MaskedTextBox();
@@ -73,18 +75,16 @@
             this.pnNSX = new System.Windows.Forms.Panel();
             this.cbbNhaSX = new System.Windows.Forms.ComboBox();
             this.btnNewNSX = new System.Windows.Forms.Button();
-            this.cntXoaHA = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.xoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnMaSP.SuspendLayout();
             this.pnTenSP.SuspendLayout();
             this.pnGia.SuspendLayout();
             this.pnAnhDaiDien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnhDaiDien)).BeginInit();
+            this.cntXoaHA.SuspendLayout();
             this.pnNgayNhap.SuspendLayout();
             this.pnSL.SuspendLayout();
             this.pnTongTien.SuspendLayout();
             this.pnNSX.SuspendLayout();
-            this.cntXoaHA.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnMaSP
@@ -100,12 +100,12 @@
             // lbMaSP
             // 
             this.lbMaSP.AutoSize = true;
-            this.lbMaSP.Font = new System.Drawing.Font("UVN Gia Dinh", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lbMaSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lbMaSP.Location = new System.Drawing.Point(6, 4);
             this.lbMaSP.Margin = new System.Windows.Forms.Padding(0);
             this.lbMaSP.Name = "lbMaSP";
-            this.lbMaSP.Size = new System.Drawing.Size(86, 16);
+            this.lbMaSP.Size = new System.Drawing.Size(86, 15);
             this.lbMaSP.TabIndex = 2;
             this.lbMaSP.Text = "Mã Sản Phẩm";
             // 
@@ -142,12 +142,12 @@
             // lbTenSP
             // 
             this.lbTenSP.AutoSize = true;
-            this.lbTenSP.Font = new System.Drawing.Font("UVN Gia Dinh", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lbTenSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lbTenSP.Location = new System.Drawing.Point(6, 4);
             this.lbTenSP.Margin = new System.Windows.Forms.Padding(0);
             this.lbTenSP.Name = "lbTenSP";
-            this.lbTenSP.Size = new System.Drawing.Size(127, 16);
+            this.lbTenSP.Size = new System.Drawing.Size(122, 15);
             this.lbTenSP.TabIndex = 2;
             this.lbTenSP.Text = "Nhập Tên Sản Phẩm";
             // 
@@ -203,12 +203,12 @@
             // lbGia
             // 
             this.lbGia.AutoSize = true;
-            this.lbGia.Font = new System.Drawing.Font("UVN Gia Dinh", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lbGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lbGia.Location = new System.Drawing.Point(6, 4);
             this.lbGia.Margin = new System.Windows.Forms.Padding(0);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(124, 16);
+            this.lbGia.Size = new System.Drawing.Size(120, 15);
             this.lbGia.TabIndex = 2;
             this.lbGia.Text = "Nhập Giá Sản Phẩm";
             // 
@@ -223,7 +223,7 @@
             // 
             // cbbtinhTrang
             // 
-            this.cbbtinhTrang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbtinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cbbtinhTrang.FormattingEnabled = true;
             this.cbbtinhTrang.Items.AddRange(new object[] {
             "None",
@@ -231,37 +231,37 @@
             "Sản Phẩm Này Chưa Có"});
             this.cbbtinhTrang.Location = new System.Drawing.Point(356, 118);
             this.cbbtinhTrang.Name = "cbbtinhTrang";
-            this.cbbtinhTrang.Size = new System.Drawing.Size(193, 24);
+            this.cbbtinhTrang.Size = new System.Drawing.Size(193, 23);
             this.cbbtinhTrang.TabIndex = 9;
             this.cbbtinhTrang.Tag = "TT";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("UVN Gia Dinh", 9.75F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(353, 101);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 16);
+            this.label2.Size = new System.Drawing.Size(102, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Sản Phẩm Đã Có";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("UVN Gia Dinh", 9.75F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(353, 47);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 16);
+            this.label3.Size = new System.Drawing.Size(124, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "Chọn Loại Sản Phẩm";
             // 
             // cbbLoai
             // 
-            this.cbbLoai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cbbLoai.FormattingEnabled = true;
             this.cbbLoai.Items.AddRange(new object[] {
             "None",
@@ -269,19 +269,19 @@
             "Linh Kiện"});
             this.cbbLoai.Location = new System.Drawing.Point(356, 64);
             this.cbbLoai.Name = "cbbLoai";
-            this.cbbLoai.Size = new System.Drawing.Size(192, 24);
+            this.cbbLoai.Size = new System.Drawing.Size(192, 23);
             this.cbbLoai.TabIndex = 9;
             this.cbbLoai.Tag = "Loai";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("UVN Gia Dinh", 9.75F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label4.Location = new System.Drawing.Point(353, 150);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 16);
+            this.label4.Size = new System.Drawing.Size(97, 15);
             this.label4.TabIndex = 8;
             this.label4.Text = "Chọn Sản Phẩm";
             // 
@@ -338,6 +338,22 @@
             this.pbAnhDaiDien.TabIndex = 0;
             this.pbAnhDaiDien.TabStop = false;
             // 
+            // cntXoaHA
+            // 
+            this.cntXoaHA.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.cntXoaHA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xoaToolStripMenuItem});
+            this.cntXoaHA.Name = "cntXoaHA";
+            this.cntXoaHA.Size = new System.Drawing.Size(96, 26);
+            // 
+            // xoaToolStripMenuItem
+            // 
+            this.xoaToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.xoaToolStripMenuItem.Name = "xoaToolStripMenuItem";
+            this.xoaToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
+            this.xoaToolStripMenuItem.Text = "Xóa";
+            this.xoaToolStripMenuItem.Click += new System.EventHandler(this.XoaToolStripMenuItem_Click);
+            // 
             // pnNgayNhap
             // 
             this.pnNgayNhap.Controls.Add(this.panel1);
@@ -360,23 +376,23 @@
             // mTxtNgayNhap
             // 
             this.mTxtNgayNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mTxtNgayNhap.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.mTxtNgayNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.mTxtNgayNhap.Location = new System.Drawing.Point(9, 24);
             this.mTxtNgayNhap.Mask = "00/00/0000";
             this.mTxtNgayNhap.Name = "mTxtNgayNhap";
-            this.mTxtNgayNhap.Size = new System.Drawing.Size(129, 17);
+            this.mTxtNgayNhap.Size = new System.Drawing.Size(129, 14);
             this.mTxtNgayNhap.TabIndex = 2;
             this.mTxtNgayNhap.ValidatingType = typeof(System.DateTime);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("UVN Gia Dinh", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label6.Location = new System.Drawing.Point(6, 4);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 16);
+            this.label6.Size = new System.Drawing.Size(101, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "Ngày Nhập Hàng";
             // 
@@ -393,12 +409,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("UVN Gia Dinh", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label7.Location = new System.Drawing.Point(6, 4);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 16);
+            this.label7.Size = new System.Drawing.Size(93, 15);
             this.label7.TabIndex = 2;
             this.label7.Text = "Nhập Số Lượng";
             // 
@@ -414,10 +430,10 @@
             // txtSoLuong
             // 
             this.txtSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSoLuong.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSoLuong.Location = new System.Drawing.Point(9, 24);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(170, 17);
+            this.txtSoLuong.Size = new System.Drawing.Size(170, 14);
             this.txtSoLuong.TabIndex = 3;
             this.txtSoLuong.Leave += new System.EventHandler(this.txtSoLuong_OnLeave);
             // 
@@ -479,24 +495,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("UVN Gia Dinh", 9.75F);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label10.Location = new System.Drawing.Point(20, 7);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 16);
+            this.label10.Size = new System.Drawing.Size(81, 15);
             this.label10.TabIndex = 13;
             this.label10.Text = "Chọn Nhà SX";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("UVN Gia Dinh", 9.75F);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label11.Location = new System.Drawing.Point(353, 261);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(146, 16);
+            this.label11.Size = new System.Drawing.Size(129, 15);
             this.label11.TabIndex = 15;
             this.label11.Text = "Cấu Hình (Điện Thoại)";
             // 
@@ -577,22 +593,6 @@
             this.btnNewNSX.Text = "Mới";
             this.btnNewNSX.UseVisualStyleBackColor = true;
             // 
-            // cntXoaHA
-            // 
-            this.cntXoaHA.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.cntXoaHA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xoaToolStripMenuItem});
-            this.cntXoaHA.Name = "cntXoaHA";
-            this.cntXoaHA.Size = new System.Drawing.Size(96, 26);
-            // 
-            // xoaToolStripMenuItem
-            // 
-            this.xoaToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.xoaToolStripMenuItem.Name = "xoaToolStripMenuItem";
-            this.xoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.xoaToolStripMenuItem.Text = "Xóa";
-            this.xoaToolStripMenuItem.Click += new System.EventHandler(this.XoaToolStripMenuItem_Click);
-            // 
             // NhapSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -628,6 +628,7 @@
             this.pnGia.PerformLayout();
             this.pnAnhDaiDien.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAnhDaiDien)).EndInit();
+            this.cntXoaHA.ResumeLayout(false);
             this.pnNgayNhap.ResumeLayout(false);
             this.pnNgayNhap.PerformLayout();
             this.pnSL.ResumeLayout(false);
@@ -636,7 +637,6 @@
             this.pnTongTien.PerformLayout();
             this.pnNSX.ResumeLayout(false);
             this.pnNSX.PerformLayout();
-            this.cntXoaHA.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

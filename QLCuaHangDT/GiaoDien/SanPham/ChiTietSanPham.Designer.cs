@@ -46,9 +46,8 @@
             this.btnMa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnMa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMa.Location = new System.Drawing.Point(0, 0);
-            this.btnMa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMa.Name = "btnMa";
-            this.btnMa.Size = new System.Drawing.Size(112, 92);
+            this.btnMa.Size = new System.Drawing.Size(75, 60);
             this.btnMa.TabIndex = 0;
             this.btnMa.Text = "button1";
             this.btnMa.UseVisualStyleBackColor = true;
@@ -59,10 +58,10 @@
             this.btnTen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnTen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnTen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTen.Location = new System.Drawing.Point(117, 0);
+            this.btnTen.Location = new System.Drawing.Point(78, 0);
             this.btnTen.Margin = new System.Windows.Forms.Padding(0);
             this.btnTen.Name = "btnTen";
-            this.btnTen.Size = new System.Drawing.Size(200, 92);
+            this.btnTen.Size = new System.Drawing.Size(133, 60);
             this.btnTen.TabIndex = 1;
             this.btnTen.Text = "button2";
             this.btnTen.UseVisualStyleBackColor = true;
@@ -73,10 +72,10 @@
             this.btnHSX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnHSX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnHSX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHSX.Location = new System.Drawing.Point(316, 0);
+            this.btnHSX.Location = new System.Drawing.Point(211, 0);
             this.btnHSX.Margin = new System.Windows.Forms.Padding(0);
             this.btnHSX.Name = "btnHSX";
-            this.btnHSX.Size = new System.Drawing.Size(135, 92);
+            this.btnHSX.Size = new System.Drawing.Size(90, 60);
             this.btnHSX.TabIndex = 2;
             this.btnHSX.Text = "button3";
             this.btnHSX.UseVisualStyleBackColor = true;
@@ -87,10 +86,10 @@
             this.btnGia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnGia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGia.Location = new System.Drawing.Point(456, 0);
+            this.btnGia.Location = new System.Drawing.Point(304, 0);
             this.btnGia.Margin = new System.Windows.Forms.Padding(0);
             this.btnGia.Name = "btnGia";
-            this.btnGia.Size = new System.Drawing.Size(124, 92);
+            this.btnGia.Size = new System.Drawing.Size(83, 60);
             this.btnGia.TabIndex = 3;
             this.btnGia.Text = "button4";
             this.btnGia.UseVisualStyleBackColor = true;
@@ -101,10 +100,10 @@
             this.btnTonKho.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnTonKho.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnTonKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTonKho.Location = new System.Drawing.Point(598, 0);
+            this.btnTonKho.Location = new System.Drawing.Point(399, 0);
             this.btnTonKho.Margin = new System.Windows.Forms.Padding(0);
             this.btnTonKho.Name = "btnTonKho";
-            this.btnTonKho.Size = new System.Drawing.Size(81, 92);
+            this.btnTonKho.Size = new System.Drawing.Size(54, 60);
             this.btnTonKho.TabIndex = 4;
             this.btnTonKho.Text = "button5";
             this.btnTonKho.UseVisualStyleBackColor = true;
@@ -115,10 +114,10 @@
             this.btnKM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnKM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKM.Location = new System.Drawing.Point(698, 0);
+            this.btnKM.Location = new System.Drawing.Point(465, 0);
             this.btnKM.Margin = new System.Windows.Forms.Padding(0);
             this.btnKM.Name = "btnKM";
-            this.btnKM.Size = new System.Drawing.Size(75, 92);
+            this.btnKM.Size = new System.Drawing.Size(50, 60);
             this.btnKM.TabIndex = 5;
             this.btnKM.Text = "Có";
             this.btnKM.UseVisualStyleBackColor = true;
@@ -126,17 +125,20 @@
             // pbChiTiet
             // 
             this.pbChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("pbChiTiet.Image")));
-            this.pbChiTiet.Location = new System.Drawing.Point(777, 18);
-            this.pbChiTiet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbChiTiet.Location = new System.Drawing.Point(518, 12);
             this.pbChiTiet.Name = "pbChiTiet";
-            this.pbChiTiet.Size = new System.Drawing.Size(58, 57);
+            this.pbChiTiet.Size = new System.Drawing.Size(39, 37);
             this.pbChiTiet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbChiTiet.TabIndex = 6;
             this.pbChiTiet.TabStop = false;
+            this.pbChiTiet.Click += new System.EventHandler(this.pbChiTiet_Click);
+            this.pbChiTiet.DoubleClick += new System.EventHandler(this.HienThongTinSanPham);
+            this.pbChiTiet.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.pbChiTiet.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // ChiTietSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pbChiTiet);
@@ -148,7 +150,7 @@
             this.Controls.Add(this.btnMa);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ChiTietSanPham";
-            this.Size = new System.Drawing.Size(844, 92);
+            this.Size = new System.Drawing.Size(563, 60);
             ((System.ComponentModel.ISupportInitialize)(this.pbChiTiet)).EndInit();
             this.ResumeLayout(false);
 

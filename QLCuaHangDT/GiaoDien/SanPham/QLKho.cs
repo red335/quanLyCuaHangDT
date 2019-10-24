@@ -15,6 +15,7 @@ namespace QLCuaHangDT.GiaoDien.SanPham
         LINH_KIEN,
         NHAP_HANG
     }
+   public delegate void AnHienDanhSach();
     public partial class QLKho : UserControl
     {
         private Loai_Quan_Ly loaiMenu = Loai_Quan_Ly.DIEN_THOAI;
@@ -22,6 +23,11 @@ namespace QLCuaHangDT.GiaoDien.SanPham
         private Color colorHover = Color.FromArgb(26, 164, 255);
         private Button currentSelectButton = null;
         private Size parentSize;
+
+       
+        AnHienDanhSach reset ;
+
+
         public QLKho()
         {
             InitializeComponent();
@@ -97,26 +103,35 @@ namespace QLCuaHangDT.GiaoDien.SanPham
         private void KhoiTaoMenu()
         {
             this.pnCenter.Controls.Clear();
+            btnReset.Visible = false;
             if (loaiMenu == Loai_Quan_Ly.DIEN_THOAI)
             {
-                DanhSachSanPham danhSachSanPham = new DanhSachSanPham();
+                DanhSachSanPham danhSachSanPham = new DanhSachSanPham(()=> { btnReset.Visible = true; });
                 danhSachSanPham.LoaiSanPham = Model.Loai_San_Pham.DIEN_THOAI;
 
-                danhSachSanPham.LoadDanhSach();
+                danhSachSanPham.khoiTaoDanhSach();
                 this.pnCenter.Controls.Add(danhSachSanPham);
+                reset = new AnHienDanhSach(danhSachSanPham.khoiTaoDanhSach);
             }
             else if (loaiMenu == Loai_Quan_Ly.LINH_KIEN)
             {
-                DanhSachSanPham danhSachSanPham = new DanhSachSanPham();
+                DanhSachSanPham danhSachSanPham = new DanhSachSanPham(() => { btnReset.Visible = true; });
                 danhSachSanPham.LoaiSanPham = Model.Loai_San_Pham.LINH_KIEN;
 
-                danhSachSanPham.LoadDanhSach();
+                danhSachSanPham.khoiTaoDanhSach();
                 this.pnCenter.Controls.Add(danhSachSanPham);
+                reset = new AnHienDanhSach(danhSachSanPham.khoiTaoDanhSach);
             }
             else if (loaiMenu == Loai_Quan_Ly.NHAP_HANG)
             {
                 this.pnCenter.Controls.Add(new NhapSanPham());
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            reset();
+            btnReset.Visible = false;
         }
     }
 }

@@ -78,7 +78,7 @@ namespace QLCuaHangDT.GiaoDien.Dialog
             label.AutoSize = true;
             label.Location = new System.Drawing.Point(5, 9);
             label.Name = tit;
-            label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label.Size = new System.Drawing.Size(43, 13);
             label.TabIndex = 0;
             label.Text = tit;
@@ -91,7 +91,7 @@ namespace QLCuaHangDT.GiaoDien.Dialog
             comboBox.FormattingEnabled = true;
             comboBox.Items.AddRange(new object[] { "none", "Tăng", "Giảm" });
             comboBox.Location = new System.Drawing.Point(97, 6);
-            comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            comboBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
             comboBox.Name = "comboBox1";
             comboBox.Size = new System.Drawing.Size(82, 21);

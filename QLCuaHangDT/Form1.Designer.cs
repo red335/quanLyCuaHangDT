@@ -95,7 +95,7 @@
             // pbNews
             // 
             this.pbNews.Image = ((System.Drawing.Image)(resources.GetObject("pbNews.Image")));
-            this.pbNews.Location = new System.Drawing.Point(659, 6);
+            this.pbNews.Location = new System.Drawing.Point(659, 13);
             this.pbNews.Name = "pbNews";
             this.pbNews.Size = new System.Drawing.Size(25, 25);
             this.pbNews.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,7 +106,7 @@
             // pbUser
             // 
             this.pbUser.Image = ((System.Drawing.Image)(resources.GetObject("pbUser.Image")));
-            this.pbUser.Location = new System.Drawing.Point(690, 6);
+            this.pbUser.Location = new System.Drawing.Point(690, 13);
             this.pbUser.Name = "pbUser";
             this.pbUser.Size = new System.Drawing.Size(25, 25);
             this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,7 +117,7 @@
             // pbMinisize
             // 
             this.pbMinisize.Image = ((System.Drawing.Image)(resources.GetObject("pbMinisize.Image")));
-            this.pbMinisize.Location = new System.Drawing.Point(721, 6);
+            this.pbMinisize.Location = new System.Drawing.Point(721, 13);
             this.pbMinisize.Name = "pbMinisize";
             this.pbMinisize.Size = new System.Drawing.Size(25, 25);
             this.pbMinisize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +132,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExit.Location = new System.Drawing.Point(752, 6);
+            this.btnExit.Location = new System.Drawing.Point(752, 13);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(25, 25);
             this.btnExit.TabIndex = 0;

@@ -49,11 +49,9 @@ namespace QLCuaHangDT.XuLy
                 this.i = i;
             }
             public override int Compare(SanPham x, SanPham y)
-            {  
-                
-                if (x.MaSanPham > y.MaSanPham) return 1 * i;
-                else if (x.MaSanPham < y.MaSanPham) return -1 * i;
-                else return 0;
+            {
+
+                return x.MaSanPham.CompareTo(y.MaSanPham) * i;
             }
         }
 

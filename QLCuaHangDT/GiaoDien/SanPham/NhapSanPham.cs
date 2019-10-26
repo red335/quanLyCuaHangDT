@@ -14,6 +14,7 @@ namespace QLCuaHangDT.GiaoDien.SanPham
 {
     public partial class NhapSanPham : UserControl
     {
+        
         List<Model.SanPham> sanPhams = new List<Model.SanPham>();
         List<Model.SanPham> hienThi = new List<Model.SanPham>();
         List<Model.HangSanXuat> hangSanXuats = new List<Model.HangSanXuat>();

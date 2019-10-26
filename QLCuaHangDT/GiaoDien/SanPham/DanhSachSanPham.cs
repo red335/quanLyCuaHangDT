@@ -19,14 +19,14 @@ namespace QLCuaHangDT.GiaoDien.SanPham
         private Model.Loai_San_Pham loaiSanPham = Model.Loai_San_Pham.DIEN_THOAI;
         SanPhamDAO spDAo = new SanPhamDAO();
         List<Model.SanPham> sanPhams = new List<Model.SanPham>();
-        private int selectedID = 0;
+        private string selectedID = "";
 
         //Color cho chi use chitietSanPham 
         private Color color_1 = Color.FromArgb(242, 242, 242);
         private Color color_2 = Color.White;
         private AnHienDanhSach hienBtnReset;
         public Loai_San_Pham LoaiSanPham { get => loaiSanPham; set => loaiSanPham = value; }
-        public int SelectedID { get => selectedID; set => selectedID = value; }
+        public string SelectedID { get => selectedID; set => selectedID = value; }
 
         public DanhSachSanPham( AnHienDanhSach anHienDanhSach  )
         {
@@ -46,8 +46,6 @@ namespace QLCuaHangDT.GiaoDien.SanPham
 
         }
 
-
-
         public void khoiTaoDanhSach() {
             lapDanhSach();
             updateDanhSach();
@@ -63,7 +61,6 @@ namespace QLCuaHangDT.GiaoDien.SanPham
                 sanPhams = sanPhams.Where((sanPham) => { return sanPham.LoaiSanPham != Loai_San_Pham.DIEN_THOAI; })
                     .ToList();
         }
-
         public void updateDanhSach() {
             int i = 0;
             flpDS.Controls.Clear();
@@ -78,7 +75,6 @@ namespace QLCuaHangDT.GiaoDien.SanPham
                 i++;
             }
         }
-
 
         #region Cac Thao Tac voi danh sach
      
@@ -96,31 +92,49 @@ namespace QLCuaHangDT.GiaoDien.SanPham
         //xoa
         private void PbDel_Click(object sender, EventArgs e)
         {
+            if (sanPhams.Count == 0) {
+                MessageBox.Show("Danh Sach Rong");
+                return;
+            }
             if (MessageBox.Show("Ban co chac xoa san pham nay khong??", "Delete", MessageBoxButtons.YesNo)
                 == DialogResult.Yes) {
                 //kiem tra id can xoa
-                if (selectedID != 0)
+                if (selectedID != "")
                 {
                     Model.SanPham sanPham = sanPhams.Find((s) => { return s.MaSanPham == selectedID; });
                     sanPhams.Remove(sanPham);
-                    selectedID = 0;
+                    selectedID = "";
                     updateDanhSach();
                 }
                 else {
                     MessageBox.Show("Ban can chon mot san pham de thao tac");
                 }
             }
+            
         }
 
         //Them
-        private void PbAdd_Click(object sender, EventArgs e)
+        private void pbAdd_Click_1(object sender, EventArgs e)
         {
-
+            if (sanPhams.Count == 0)
+            {
+                MessageBox.Show("Danh Sach Rong");
+                
+            }
+            else
+            {
+                Model.SanPham sanPham = sanPhams.Find((s) => { return s.MaSanPham == selectedID; });
+                new ThongTinSanPham(sanPham, ThongTinSanPham.LoaiThucHien.THEM).ShowDialog();
+            }
         }
-
         //CCLICK VAO BUTON SAP XEP
         private void PbSort_Click_1(object sender, EventArgs e)
         {
+            if (sanPhams.Count == 0)
+            {
+                MessageBox.Show("Danh Sach Rong");
+                return;
+            }
             string thuocTinh = "Mã SP: ,Họ Tên: ,Giá Bán:,Tồn Kho: "; 
             Form_Sorting form_Sorting =
                 new Form_Sorting(thuocTinh, new Sorting(Sorting_));
@@ -130,15 +144,25 @@ namespace QLCuaHangDT.GiaoDien.SanPham
 
         private void pbFitler_Click(object sender, EventArgs e)
         {
+            if (sanPhams.Count == 0)
+            {
+                MessageBox.Show("Danh Sach Rong");
+                return;
+            }
             string dat = new Model.SanPham().toStringForFitler();
             Form_Fitler form_Fitler = new Form_Fitler(dat, fitler);
             form_Fitler.ShowDialog();
         }
         //Tim Kiem
 
-        private void PbSearch_Click(object sender, EventArgs e)
+        private void pbSearch_Click_1(object sender, EventArgs e)
         {
-
+            if (sanPhams.Count == 0)
+            {
+                MessageBox.Show("Danh Sach Rong");
+                return;
+            }
+            new Form_Search(searching).ShowDialog();
         }
         // ==================HAM XU LY CAC THAO TAC ==========================\\
 
@@ -152,7 +176,7 @@ namespace QLCuaHangDT.GiaoDien.SanPham
                 sanPhams = sanPhams.Where(s =>
                 {
                     return XuLy.ThaoTacSoSanh.SoSanhChoThaoTacLoc(predicate[0],
-                    s.MaSanPham, Int32.Parse(values[0]));
+                    s.MaSanPham, values[0]);
                 }).ToList();
                 hienNutRS = true; 
             }
@@ -212,8 +236,10 @@ namespace QLCuaHangDT.GiaoDien.SanPham
                 hienNutRS = true;
             }
             if (hienNutRS)
+            {
                 hienBtnReset();
-            updateDanhSach();
+                updateDanhSach();
+            }
         }
 
         //Ham xu ly sap xep
@@ -245,16 +271,40 @@ namespace QLCuaHangDT.GiaoDien.SanPham
                 sanPhams.Sort(sxSanPham.SapXepTheoTon);
                 hienNutRS = true;
             }
-            if(hienNutRS)
-               hienBtnReset();
-            updateDanhSach();
+            if (hienNutRS)
+            {
+                hienBtnReset();
+                updateDanhSach();
+            }
           
         }
+        //HAM XU LY TIM KIEM
+        private void searching(string maSo) {
+            sanPhams = sanPhams.Where((s) => { return s.MaSanPham.ToString() == maSo; }).ToList();
+            updateDanhSach(); 
+            if(sanPhams.Count == 0)
+            {
+              
+                Label label = new Label();
+                label.Font = new Font("Tahoma", 9F);
+                label.Text = "Khong co ket qua";
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.ForeColor = Color.Black;
+                label.AutoSize = false;
+                label.Size = new Size(flpDS.Size.Width - 10, 30);
+                flpDS.Controls.Add(label);
+                 
+            }
+            hienBtnReset();
+        }
+
+
+
+
+
+
+
         #endregion
-
-       
-
-     
 
       
     }

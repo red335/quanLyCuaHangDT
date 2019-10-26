@@ -10,8 +10,8 @@ using System.Windows.Forms;
 using QLCuaHangDT.Model;
 namespace QLCuaHangDT.GiaoDien.GiaoDienSanPham
 {
-    public delegate void SetSelectedID(int id);
-    public delegate int GetSelectedID();
+    public delegate void SetSelectedID(string id);
+    public delegate string GetSelectedID();
     public partial class ChiTietSanPham : UserControl
     {
         private Model.SanPham sanPham;
@@ -101,24 +101,25 @@ namespace QLCuaHangDT.GiaoDien.GiaoDienSanPham
 
         private void pbChiTiet_Click(object sender, EventArgs e)
         {
-            if (getSelectedID() == 0)
+            if (getSelectedID() == "")
             {
                 BackColor_1 = selectedColor;
                 selected = true;
+                
                 selectedID(sanPham.MaSanPham);
 
               //  MessageBox.Show("Test");
             }
             else if (getSelectedID() == sanPham.MaSanPham) {
                 selected = false;
-                selectedID(0);
+                selectedID("");
                 BackColor_1 = normalColor;
             }
         }
 
         private void HienThongTinSanPham(object sender, EventArgs e)
         {
-            new GiaoDien.SanPham.ThongTinSanPham().ShowDialog();
+            new GiaoDien.SanPham.ThongTinSanPham(sanPham).ShowDialog();
         }
     }
 }

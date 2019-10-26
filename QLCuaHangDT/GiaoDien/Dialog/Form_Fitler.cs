@@ -120,7 +120,7 @@ namespace QLCuaHangDT.GiaoDien.Dialog
         private ComboBox createComboBox(int kieuDL)
         {
             ComboBox comboBox = new ComboBox();
-            comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           comboBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             comboBox.FormattingEnabled = true;
             comboBox.Location = new System.Drawing.Point(88, 8);
             comboBox.Size = new System.Drawing.Size(106, 23);
@@ -158,7 +158,7 @@ namespace QLCuaHangDT.GiaoDien.Dialog
                 textBox.Mask = "00/00/0000";
             }
 
-            textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             textBox.Location = new System.Drawing.Point(200, 8);
             textBox.Size = new System.Drawing.Size(68, 23);
 
@@ -169,7 +169,7 @@ namespace QLCuaHangDT.GiaoDien.Dialog
         {
             Label label = new Label();
             label.AutoSize = true;
-            label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label.Location = new System.Drawing.Point(4, 9);
 
             label.Size = new System.Drawing.Size(41, 15);
@@ -184,7 +184,11 @@ namespace QLCuaHangDT.GiaoDien.Dialog
             for (int i = 0; i < textBoxes.Count; i++)
             {
                 predicate[i] = comboBoxes[i].SelectedIndex;
-                if (textBoxes[i].Text == "") values[i] = " ";
+                if (textBoxes[i].Text == "")
+                {
+                    values[i] = " ";
+                    predicate[i] = 0;
+                }
                 else
                     values[i] = textBoxes[i].Text;
                 result += predicate[i].ToString() + " - " + values[i] + " ; ";

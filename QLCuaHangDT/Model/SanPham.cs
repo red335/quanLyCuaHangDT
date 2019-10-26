@@ -16,7 +16,7 @@ namespace QLCuaHangDT.Model
 
     public class SanPham
     {
-        private int maSanPham;
+        private string maSanPham;
         private string tenSanPham;
         private Loai_San_Pham loaiSanPham;
         private int gia;
@@ -30,7 +30,7 @@ namespace QLCuaHangDT.Model
             this.HangSanXuatSanPham = new HangSanXuat();
         }
 
-        public SanPham(int maSanPham, string tenSanPham, Loai_San_Pham loaiSanPham, int gia, HangSanXuat hangSanXuatSanPham, int soLuongTonKho, bool coKhuyenMai, string hinhAnh)
+        public SanPham(string maSanPham, string tenSanPham, Loai_San_Pham loaiSanPham, int gia, HangSanXuat hangSanXuatSanPham, int soLuongTonKho, bool coKhuyenMai, string hinhAnh)
         {
             this.MaSanPham = maSanPham;
             this.TenSanPham = tenSanPham;
@@ -40,6 +40,24 @@ namespace QLCuaHangDT.Model
             SoLuongTonKho1 = soLuongTonKho;
             this.CoKhuyenMai = coKhuyenMai;
             this.DuongDanHinhAnh = hinhAnh;
+        }
+
+        public SanPham(int maSanPham, string tenSanPham, Loai_San_Pham loaiSanPham, int gia, HangSanXuat hangSanXuatSanPham, int soLuongTonKho, bool coKhuyenMai, string hinhAnh)
+        {
+            
+            this.TenSanPham = tenSanPham;
+            this.LoaiSanPham = loaiSanPham;
+            this.Gia = gia;
+            this.HangSanXuatSanPham = hangSanXuatSanPham;
+            SoLuongTonKho1 = soLuongTonKho;
+            this.CoKhuyenMai = coKhuyenMai;
+            this.DuongDanHinhAnh = hinhAnh;
+            string kiTuDau = "";
+            if (loaiSanPham == Loai_San_Pham.DIEN_THOAI)
+                kiTuDau = "D";
+            else
+                kiTuDau = "L";
+            this.MaSanPham =kiTuDau+ maSanPham.ToString();
         }
 
         public SanPham(SanPham sanPham) {
@@ -60,7 +78,7 @@ namespace QLCuaHangDT.Model
             DuongDanHinhAnh = sanPham.DuongDanHinhAnh;
         }
 
-        public int MaSanPham { get => maSanPham; set => maSanPham = value; }
+        public string MaSanPham { get => maSanPham; set => maSanPham = value; }
         public string TenSanPham { get => tenSanPham; set => tenSanPham = value; }
         public Loai_San_Pham LoaiSanPham { get => loaiSanPham; set => loaiSanPham = value; }
         public int Gia { get => gia; set => gia = value; }
@@ -72,7 +90,7 @@ namespace QLCuaHangDT.Model
         public string toStringForFitler()
         {
             string dat = "";
-            dat +="Ma SP: "+ MaSanPham.ToString() + ";";
+            dat +="Ma SP: "+ MaSanPham + ";";
             dat += "Ten SP: " + TenSanPham + ";";
             dat += "Loai SP: " + LoaiSanPham.ToString() + ";";
             dat += "Gia: " + Gia.ToString().ToString() + ";";

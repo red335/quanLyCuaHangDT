@@ -79,7 +79,7 @@
             // 
             this.pnLine.BackColor = System.Drawing.Color.DodgerBlue;
             this.pnLine.Location = new System.Drawing.Point(0, 34);
-            this.pnLine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnLine.Margin = new System.Windows.Forms.Padding(2);
             this.pnLine.Name = "pnLine";
             this.pnLine.Size = new System.Drawing.Size(600, 3);
             this.pnLine.TabIndex = 6;
@@ -209,6 +209,7 @@
             this.pbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSearch.TabIndex = 12;
             this.pbSearch.TabStop = false;
+            this.pbSearch.Click += new System.EventHandler(this.pbSearch_Click_1);
             // 
             // label4
             // 
@@ -274,6 +275,7 @@
             this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAdd.TabIndex = 12;
             this.pbAdd.TabStop = false;
+            this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click_1);
             // 
             // label1
             // 

@@ -23,10 +23,21 @@ namespace QLCuaHangDT.GiaoDien.NhanVienGiaoDien
         public QuanLyNhanVien()
         {
             InitializeComponent();
-            LoadNhanVien();
+            pbAdd.MouseHover += Pb_ThayDoiKichThuocOnMouseHover;
+            pbAdd.MouseLeave += Pb_ThayDoiKichThuocOnMoueLeave;
+
+            pbDel.MouseHover += Pb_ThayDoiKichThuocOnMouseHover;
+            pbDel.MouseLeave += Pb_ThayDoiKichThuocOnMoueLeave;
+            pbSort.MouseHover += Pb_ThayDoiKichThuocOnMouseHover;
+            pbSort.MouseLeave += Pb_ThayDoiKichThuocOnMoueLeave;
+            pbFitler.MouseHover += Pb_ThayDoiKichThuocOnMouseHover;
+            pbFitler.MouseLeave += Pb_ThayDoiKichThuocOnMoueLeave;
+            pbSearch.MouseHover += Pb_ThayDoiKichThuocOnMouseHover;
+            pbSearch.MouseLeave += Pb_ThayDoiKichThuocOnMoueLeave;
+            UpdateDanhSachNhanVien();
         }
 
-        private void LoadNhanVien() {
+        private void UpdateDanhSachNhanVien() {
             listNhanVien = nvDAO.layDanhSachNhanVien();
             int i = 0;
             foreach (var nhanVien in listNhanVien) {
@@ -38,5 +49,16 @@ namespace QLCuaHangDT.GiaoDien.NhanVienGiaoDien
                 i++;
             }
          }
+        private void Pb_ThayDoiKichThuocOnMouseHover(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = sender as PictureBox;
+            pictureBox.BackColor = Color.LightGray;
+        }
+        private void Pb_ThayDoiKichThuocOnMoueLeave(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = sender as PictureBox;
+            pictureBox.BackColor = Color.White;
+        }
+
     }
 }

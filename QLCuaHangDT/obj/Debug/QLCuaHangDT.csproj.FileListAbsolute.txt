@@ -40,3 +40,5 @@ D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GiaoDien
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GiaoDien.Dialog.Form_Sorting.resources
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GiaoDien.Dialog.Form_Fitler.resources
 D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GiaoDien.SanPham.ThongTinSanPham.resources
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GiaoDien.Dialog.Form_Search.resources
+D:\TaiLieuGithub\QuanLyDT\QLCuaHangDT\QLCuaHangDT\obj\Debug\QLCuaHangDT.GiaoDien.SanPham.CauHinh.resources
